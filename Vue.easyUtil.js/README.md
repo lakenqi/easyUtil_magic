@@ -1,40 +1,40 @@
 # <h1>Vue.easyUtil</h1>
 * <h3>Introduce</h3>
- * <h3>»ùÓÚVueµÄ×é¼şÉú³ÉÆ÷ÎÄ¼ş</h3>
- * <h3>¿ÉÀûÓÃ¸ÃÉú³ÉÆ÷Éú³ÉÈçÏÂ×é¼ş£¬±ãÓÚ¿ª·¢£¬²¿·Ö×é¼şµÄ¹¦ÄÜĞÔ²Ù×÷¿ÉÄÜĞèÒªÒÀÀµÆäËûÎÄ¼ş£¬Çë²ÎÔÄÏêÏ¸ËµÃ÷</h3>
- * <h3>ËùÓĞÒÀÀµÎÄ¼şÎ»ÓÚsupportÎÄ¼ş¼ÓÏÂ£¬¸ĞĞ»Ìá¹©ÒÀÀµ×ÊÔ´µÄ´óÉñ£¬ÈçĞè¸ü¶à×ÊÔ´£¬Çëµ½ÏàÓ¦µÄµØÖ·ÏÂÔØ</h3>
- * <strong>1.selectedÏÂÀ­¿ò×é¼ş:</strong>ÔÚ¸¸¼¶×é¼şÉÏÓÃid£¬textÊôĞÔ£¬·Ö±ğÃüÃû×é¼şµÄidºÍÄ¬ÈÏÏÔÊ¾ÎÄ±¾,</br>
- 						&emsp;&emsp;&emsp;&emsp;ÔÚ×é¼şÖ®¼äÒÔ"\<li>\<a class="" val="">text\</a>\</li>"±êÇ©Ä£°åÉú³ÉÏÂÀ­¿òµÄÄÚÈİ¼´¿É</br>
- 						&emsp;&emsp;&emsp;&emsp;×é¼şĞèÅäºÏjquery.easyUtilÖĞµÄ³õÊ¼»¯·½·¨¿ÉÕı³£Ê¹ÓÃ£¬ÑùÊ½ÒıÈëeasyUtil.css¼´¿É¡£</br>
- * <strong>2.j-dateÈÕÆÚ×é¼ş:</strong>ÔÚ¸¸¼¶×é¼şÉÏÓÃid£¬defalulttextÊôĞÔ£¬·Ö±ğÃüÃû×é¼şµÄidºÍÄ¬ÈÏÏÔÊ¾ÎÄ±¾,</br>
- 						&emsp;&emsp;&emsp;&emsp;±¾×é½¨»ùÓÚjquery.jedate²å¼ş£¬ĞèÒªÒıÈë£¬²¢ÓÃÆä·½·¨³õÊ¼»¯£¬Í¬Ê±ĞèÒªeasyUtil.css¼°jedate.cssÑùÊ½Ö§³Ö</br>
-* <strong>3.v-outsidecloseÖ¸Áî:</strong>ÈçÓĞµã»÷Íâ²¿ÈÎÒâµØ·½¹Ø±Õ²Ëµ¥µÄĞèÇó£¬¿ÉÊ¹ÓÃ¸Ã×é¼ş£¬°ó¶¨¶ÔÓ¦µÄ¹Ø±Õº¯ÊıÃû³Æ¼´¿É</br>
-* <strong>4.super-table±í¸ñ×é¼ş</strong>¸¸¼¶×é¼şÉÏÊ¹ÓÃÈçÏÂÊôĞÔ£º</br>
-										&emsp;&emsp;&emsp;&emsp;'maindiv',  //Ö÷divid</br>
-										&emsp;&emsp;&emsp;&emsp;'bodydiv',  //±í¸ñbodydivid</br>
-										&emsp;&emsp;&emsp;&emsp;'head',   //±íÍ·id</br>
-										&emsp;&emsp;&emsp;&emsp;'body',   //±íÉíid</br>
-										&emsp;&emsp;&emsp;&emsp;'maindivclass',  //Ö÷div class</br>
-										&emsp;&emsp;&emsp;&emsp;'bodydivclass',  //±í¸ñbody div class</br>
-										&emsp;&emsp;&emsp;&emsp;'loadingpath',   //¼ÓÔØÍ¼±íµØÖ·£¬ÓĞÄ¬ÈÏÖµ</br>
-										&emsp;&emsp;&emsp;&emsp;'iscounter',    //ÊÇ·ñÆôÓÃ¼ÆÊıÆ÷£¬·Ö±ğÃüÃû×é¼şµÄidºÍÄ¬ÈÏÏÔÊ¾ÎÄ±¾,</br>
-										&emsp;&emsp;&emsp;&emsp;¿É¿ªÆô×Ô¶¨Òå±í¸ñ¼°¼ÆÊıÄ£Ê½</br>
- 						&emsp;&emsp;&emsp;&emsp;ÔÚ×é¼şÖ®¼äÒÔÈçÏÂÄ£°åÒıÈë¶ÔÓ¦µÄ±í¸ñÄÚÈİ¼´¿É£º</br>
+ * <h3>åŸºäºVueçš„ç»„ä»¶ç”Ÿæˆå™¨æ–‡ä»¶</h3>
+ * <h3>å¯åˆ©ç”¨è¯¥ç”Ÿæˆå™¨ç”Ÿæˆå¦‚ä¸‹ç»„ä»¶ï¼Œä¾¿äºå¼€å‘ï¼Œéƒ¨åˆ†ç»„ä»¶çš„åŠŸèƒ½æ€§æ“ä½œå¯èƒ½éœ€è¦ä¾èµ–å…¶ä»–æ–‡ä»¶ï¼Œè¯·å‚é˜…è¯¦ç»†è¯´æ˜</h3>
+ * <h3>æ‰€æœ‰ä¾èµ–æ–‡ä»¶ä½äºsupportæ–‡ä»¶åŠ ä¸‹ï¼Œæ„Ÿè°¢æä¾›ä¾èµ–èµ„æºçš„å¤§ç¥ï¼Œå¦‚éœ€æ›´å¤šèµ„æºï¼Œè¯·åˆ°ç›¸åº”çš„åœ°å€ä¸‹è½½</h3>
+ * <strong>1.selectedä¸‹æ‹‰æ¡†ç»„ä»¶:</strong>åœ¨çˆ¶çº§ç»„ä»¶ä¸Šç”¨idï¼Œtextå±æ€§ï¼Œåˆ†åˆ«å‘½åç»„ä»¶çš„idå’Œé»˜è®¤æ˜¾ç¤ºæ–‡æœ¬,</br>
+ 						&emsp;&emsp;&emsp;&emsp;åœ¨ç»„ä»¶ä¹‹é—´ä»¥"\<li>\<a class="" val="">text\</a>\</li>"æ ‡ç­¾æ¨¡æ¿ç”Ÿæˆä¸‹æ‹‰æ¡†çš„å†…å®¹å³å¯</br>
+ 						&emsp;&emsp;&emsp;&emsp;ç»„ä»¶éœ€é…åˆjquery.easyUtilä¸­çš„åˆå§‹åŒ–æ–¹æ³•å¯æ­£å¸¸ä½¿ç”¨ï¼Œæ ·å¼å¼•å…¥easyUtil.csså³å¯ã€‚</br>
+ * <strong>2.j-dateæ—¥æœŸç»„ä»¶:</strong>åœ¨çˆ¶çº§ç»„ä»¶ä¸Šç”¨idï¼Œdefalulttextå±æ€§ï¼Œåˆ†åˆ«å‘½åç»„ä»¶çš„idå’Œé»˜è®¤æ˜¾ç¤ºæ–‡æœ¬,</br>
+ 						&emsp;&emsp;&emsp;&emsp;æœ¬ç»„å»ºåŸºäºjquery.jedateæ’ä»¶ï¼Œéœ€è¦å¼•å…¥ï¼Œå¹¶ç”¨å…¶æ–¹æ³•åˆå§‹åŒ–ï¼ŒåŒæ—¶éœ€è¦easyUtil.cssåŠjedate.cssæ ·å¼æ”¯æŒ</br>
+* <strong>3.v-outsidecloseæŒ‡ä»¤:</strong>å¦‚æœ‰ç‚¹å‡»å¤–éƒ¨ä»»æ„åœ°æ–¹å…³é—­èœå•çš„éœ€æ±‚ï¼Œå¯ä½¿ç”¨è¯¥ç»„ä»¶ï¼Œç»‘å®šå¯¹åº”çš„å…³é—­å‡½æ•°åç§°å³å¯</br>
+* <strong>4.super-tableè¡¨æ ¼ç»„ä»¶:</strong>çˆ¶çº§ç»„ä»¶ä¸Šä½¿ç”¨å¦‚ä¸‹å±æ€§ï¼š</br>
+										&emsp;&emsp;&emsp;&emsp;'maindiv',  //ä¸»divid</br>
+										&emsp;&emsp;&emsp;&emsp;'bodydiv',  //è¡¨æ ¼bodydivid</br>
+										&emsp;&emsp;&emsp;&emsp;'head',   //è¡¨å¤´id</br>
+										&emsp;&emsp;&emsp;&emsp;'body',   //è¡¨èº«id</br>
+										&emsp;&emsp;&emsp;&emsp;'maindivclass',  //ä¸»div class</br>
+										&emsp;&emsp;&emsp;&emsp;'bodydivclass',  //è¡¨æ ¼body div class</br>
+										&emsp;&emsp;&emsp;&emsp;'loadingpath',   //åŠ è½½å›¾è¡¨åœ°å€ï¼Œæœ‰é»˜è®¤å€¼</br>
+										&emsp;&emsp;&emsp;&emsp;'iscounter',    //æ˜¯å¦å¯ç”¨è®¡æ•°å™¨ï¼Œåˆ†åˆ«å‘½åç»„ä»¶çš„idå’Œé»˜è®¤æ˜¾ç¤ºæ–‡æœ¬,</br>
+										&emsp;&emsp;&emsp;&emsp;å¯å¼€å¯è‡ªå®šä¹‰è¡¨æ ¼åŠè®¡æ•°æ¨¡å¼</br>
+ 						&emsp;&emsp;&emsp;&emsp;åœ¨ç»„ä»¶ä¹‹é—´ä»¥å¦‚ä¸‹æ¨¡æ¿å¼•å…¥å¯¹åº”çš„è¡¨æ ¼å†…å®¹å³å¯ï¼š</br>
  						"\<template slot="thead">\
-						\<span class="th" style="width: 25%;">\±íÍ·ÄÚÈİ\</span>\
-						\<span class="th" style="width: 20%;">\±íÍ·ÄÚÈİ\</span>\
+						\<span class="th" style="width: 25%;">\è¡¨å¤´å†…å®¹\</span>\
+						\<span class="th" style="width: 20%;">\è¡¨å¤´å†…å®¹\</span>\
 						\</template>\
 						\<template slot="tbody">\
 					\<div class="tr" :class="rangClass(i)"  v-for="(data,i) in datas">\
-						\<span class="td" style="width: 25%;">\±í¸ñÄÚÈİ\</span>\
-						\<span class="td" style="width: 20%;">±í¸ñÄÚÈİ</span>\
+						\<span class="td" style="width: 25%;">\è¡¨æ ¼å†…å®¹\</span>\
+						\<span class="td" style="width: 20%;">è¡¨æ ¼å†…å®¹</span>\
 					\</div>\
 				\</template>\
 				\<template>\
-					\<div class="easyUtil-noContent" v-show="show">\ÔİÎŞÄÚÈİ\</div>\
+					\<div class="easyUtil-noContent" v-show="show">\æš‚æ— å†…å®¹\</div>\
 				\</template>\"</br>
- 						&emsp;&emsp;&emsp;&emsp;ÑùÊ½ĞèÒıÈëeasyUtil.css¼´¿É¡£</br>
-* <strong>5.super-page·ÖÒ³×é¼ş</strong>¸¸¼¶×é¼şÉÏÊ¹ÓÃÈçÏÂÊôĞÔ£º</br>
+ 						&emsp;&emsp;&emsp;&emsp;æ ·å¼éœ€å¼•å…¥easyUtil.csså³å¯ã€‚</br>
+* <strong>5.super-pageåˆ†é¡µç»„ä»¶:</strong>çˆ¶çº§ç»„ä»¶ä¸Šä½¿ç”¨å¦‚ä¸‹å±æ€§ï¼š</br>
 										&emsp;&emsp;&emsp;&emsp;':max="totalPage"',  
 										&emsp;&emsp;&emsp;&emsp;'@down="getPageNum"',   
 										&emsp;&emsp;&emsp;&emsp;'@up="getPageNum"',   
