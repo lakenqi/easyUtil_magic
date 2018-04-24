@@ -34,6 +34,12 @@
 					\<div class="easyUtil-noContent" v-show="show">\暂无内容\</div>\
 				\</template>\"</br>
  						&emsp;&emsp;&emsp;&emsp;样式需引入easyUtil.css即可。</br>
+* <strong>5.super-page分页组件</strong>父级组件上使用如下属性：</br>
+										&emsp;&emsp;&emsp;&emsp;':max="totalPage"',  
+										&emsp;&emsp;&emsp;&emsp;'@down="getPageNum"',   
+										&emsp;&emsp;&emsp;&emsp;'@up="getPageNum"',   
+										&emsp;&emsp;&emsp;&emsp;'@go="getPageNum"',  
+								
 
 		
 

@@ -5,7 +5,7 @@
 /* = CopyRight by qy  = */
 /* ========== */
 
-//默认值*****************************************************
+//==============================默认值========================================
 var _s = Vue.prototype._s
 Vue.prototype._s = function (s) {
   if(typeof s === 'number'){
@@ -14,8 +14,8 @@ Vue.prototype._s = function (s) {
   	return _s.call(this, s || "--")
   } 
 }
-//默认值结束***************************************************
-//组件部分*****************************************************
+//====================================默认值结束====================================
+//====================================组件部分====================================
 //  = 下拉框 = 
 Vue.component('selected',{
 	props : ['id','text'],
@@ -128,9 +128,101 @@ Vue.component('super-table',{
 		}
 	},
 });
+//  = 分页组件 = 
+Vue.component("super-page",{
+	template:'\
+	<div class="easyUtil-page">\
+		共{{totalPage}}页\
+		<button @click="pageDown" :disabled="currentPage <= min"><<</button>\
+		当前第<input :id="inputId" type="text" :value="currentPage" @change="pageChange">页\
+		<button @click="pageUp" :disabled="currentPage >= max">>></button>\
+		<button @click="goToPage">go</button>\
+	</div>',
+	props:{
+		min:{
+			type:Number,
+			default:1
+		},
+		max:{
+			type:Number,
+			default:Infinity
+		},
+		value:{
+			type:Number,
+			default:1
+		},
+		pageid:{
+			type:String,
+			default:""
+		}
+	},
+	data:function(){
+		return {
+			totalPage : this.max,
+			currentPage : this.value,
+			inputId: this.pageid
+		}
+	},
+	watch:{
+		currentPage:function(data){
+			this.$emit('input',data);
+			this.$emit('on-change',data);
+		},
+		value: function(data){
+			this.changeNum(data);
+		}
+	},
+	methods:{
+		pageDown:function(){
+			if(this.currentPage <= this.min){
+				return;
+			}
+			this.currentPage -= 1;
+			this.$emit('down',this.currentPage);
+		},
+		pageUp:function(){
+			if(this.currentPage >= this.max){
+				return;
+			}
+			this.currentPage += 1;
+			this.$emit('up',this.currentPage);
+		},
+		goToPage: function(){
+			this.$emit('go',this.currentPage);
+		},
+		changeNum:function(data){
+			if(data < this.min){
+				data = this.min;
+			}
+			if(data > this.max){
+				data = this.max;
+			}
+		},
+		pageChange:function(e){
+			var val = e.target.value.trim(),
+					max = this.max,
+					min = this.min,
+					regex = /^[0-9]*$/;
+			if(regex.test(val)){
+				val = parseInt(val,10);
+				this.currentPage = val;
+				if(val > max){
+					this.currentPage = max;
+				}else if(val < min){
+					this.currentPage = min;
+				}
+			}else{
+				e.target.value = this.currentPage;
+			}
+		}
+	},
+	mounted:function(){
+		this.changeNum(this.value);
+	}
+});
 //  ========== 
-//组件部分结束*****************************************************
-//指令部分********************************************************
+//====================================组件部分结束====================================
+//====================================指令部分====================================
 //  = 自定义外部点击关闭指令 = 
 Vue.directive('outsideclose',{
 	bind: function (el,binding,vnode) {
@@ -151,4 +243,4 @@ Vue.directive('outsideclose',{
 	}
 });
 //  ========== 
-//指令部分结束********************************************************
+//====================================指令部分结束====================================
