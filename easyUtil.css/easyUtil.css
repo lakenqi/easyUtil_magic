@@ -14,14 +14,17 @@ a:hover,a:focus,a:active,a:visited,a:link{
 
 /* ================================================================= */
 /* = base CSS = */
+[v-cloak]{
+	display: none;
+}
 html,body{
 	font-size: 1vw;
+	color: #FFFFFF;
 }
 * {
     margin: 0px;
     padding: 0px;
-    color: #FFFFFF;
-    font-family: tahoma !important;
+    /*font-family: tahoma !important;*/
 }
 table thead, tbody tr {
     display:table;
@@ -56,7 +59,7 @@ input[type=color]{
 }
 h3{
 	font-size: 1.09vw;
-	margin: 0.9em 0px 0.8em 2em
+	margin: 0.1em 0px 0.4em 0.4em;
 }
 input,img,textarea{
 	box-sizing: border-box;
@@ -121,20 +124,41 @@ a{
     justify-content: space-between;
 }
 
-/* = hover menu display class = */
+/* ======================== hover menu display class ============================== */
 .easyUtil-mainMenu{
 	border-bottom: 5px solid transparent;
 }
-.easyUtil-disvisiable{
+.easyUtil-unvisiable{
 	position: absolute;
 	visibility: hidden;
 }
-.easyUtil-mainMenu:hover .easyUtil-disvisiable{
+.easyUtil-mainMenu:hover .easyUtil-unvisiable{
 	visibility: visible;
 	transition: visibility 0s .4s;
 }
+/* ============================================================================== */
+/* = progressBar css = */
+.easyUtil-progressBar{
+	display: -webkit-flex;
+    display: flex;
+    justify-content: space-between;
+	flex-wrap: wrap;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	margin: 1em auto;
+}
+.easyUtil-outBarDiv{
+	width: 100%;
+	height: 10px;
+	background-color: rgba(2, 88, 133, 0.3)
+}
+.easyUtil-inBarDiv{
+	border-radius: 0 5px 5px 0px;
+	background-color: currentcolor/* #54C9FF*/;
+	height: 100%;
+	transition: width .4s;
+}
 /* ========== */
-
 /* ========================table serise=================================== */
 /* = table = */
 .easyUtil-table{
@@ -143,9 +167,10 @@ a{
 	text-align: center;
 	border-spacing: 0;
 	border-collapse: collapse;
+	border: 1px #3d7295 solid;
 }
 .easyUtil-table > thead > tr{
-	background-color:#003050;
+	background-color:rgba(32,99,204,0.7);
 }
 .easyUtil-table > thead > tr > th{
 	border-bottom: none !important;
@@ -169,7 +194,7 @@ a{
 	display: table-cell !important;
 }
 .easyUtil-table > .thead >.tr {
-	background-color:#003050;
+	background-color:rgba(32,99,204,0.7);
 }
 .easyUtil-table > .thead >.tr >.th{
 	border-bottom: none !important;
@@ -227,24 +252,24 @@ a{
 }
  
 /* = changeColor = */
-.easyUtil-table tbody tr:nth-child(odd){
-	background-color: #003050;
-}
 .easyUtil-table tbody tr:nth-child(even){
+	background-color: rgba(0,114,152,0.25);
+}
+.easyUtil-table tbody tr:nth-child(odd){
 	background-color: rgba(255,255,255,0);
 }
-.easyUtil-table .tbody .tr:nth-child(odd){
-	background-color: #003050;
-}
 .easyUtil-table .tbody .tr:nth-child(even){
+	background-color: rgba(0,114,152,0.25);
+}
+.easyUtil-table .tbody .tr:nth-child(odd){
 	background-color: rgba(255,255,255,0);
 }
 /* = hoverColor = */
 .easyUtil-table tbody tr:hover{
-	background-color: rgba(0,82,153,0.9);
+	background-color: rgba(0,114,152,0.7);
 }
 .easyUtil-table .tbody .tr:hover{
-	background-color: rgba(0,82,153,0.9);
+	background-color: rgba(0,114,152,0.7);
 }
 /* ====================================================================== */
 
@@ -279,22 +304,25 @@ a{
 }
 /*fontCSS*/
 .easyUtil-fOrange{
-    color: orange !important;  
+    color: #FFB400 !important;  
 }
 .easyUtil-fBlue{
-    color: #4dbeff !important;
+    color: #54C9FF !important;
 }
 .easyUtil-fDarkBlue{
-    color: #0081ee !important;
+    color: #025885 !important;
 }
 .easyUtil-fLightBlue{
-	color: rgba(0,219,255,1) !important;
+	color: #86FAFF !important;
 }
 .easyUtil-fGreen{
-    color: #24FF00 !important;
+    color: #78FF00 !important;
 }
 .easyUtil-fYellow{
-    color: #FFD800 !important;
+    color: #FFF600 !important;
+}
+.easyUtil-fPinkRed{
+    color: #EA00FF !important;
 }
 .easyUtil-fRed{
     color: #d6505f !important;
@@ -468,14 +496,18 @@ border-radius:100px;*/
 .layui-layer {
 	border: 2px solid rgb(167, 255, 255)!important;
 	box-shadow: rgba(0, 125, 255, 0.5) 0px 0px 30px!important;
-	background-color: rgba(0, 54, 102, 0.9)!important;
+	background-color: rgba(0, 75, 123, 1)!important;
 }.layui-layer-title{
     color:rgb(167, 255, 255) !important;
     border-bottom:2px solid rgb(167, 255, 255) !important;
-    background-color:rgba(0,82,153,0.9) !important;
+    background-color:rgba(0, 75, 123, 1) !important;
+    padding: 0% !important;
+	text-align: center !important;
+	font-weight: 700 !important;
+	font-size: 16px !important;
 }.layui-layer-content{
     color:#fff !important;
-    background-color:rgba(0,34,64,0.9) !important;
+    background-color:rgba(0,46,76,1) !important;
     border-left:1px solid #2d7b80 !important;
     border-right:1px solid #2d7b80 !important; 
     border-bottom:1px solid #2d7b80 !important;

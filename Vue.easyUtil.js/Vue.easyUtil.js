@@ -84,7 +84,6 @@ Vue.component('super-table',{
 		<div :id="bodyId" :class="bodyClass">\
 			<div :id="tbodyId" class="easyUtil-table" v-cloak>\
 				<div class="tbody" :class="bodyCounter">\
-					<div id="hiddenNoSee" class="tr easyUtil-hidden"></div>\
 					<slot name="tbody"></slot>\
 				</div>\
 			</div>\
