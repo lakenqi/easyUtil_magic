@@ -110,7 +110,7 @@ Vue.component('super-table',{
 			tbodyId : this.body,
 			mainClass : this.maindivclass,
 			bodyClass : this.bodydivclass,
-			imgPath : this.loadingpath || "../img/Loading6-3.gif",
+			imgPath : this.loadingpath || "../images/Loading6-3.gif",
 			/*noContent :　this.emptytip || "暂无数据",*/
 			showHead : false,
 			counterClass : this.iscounter,
@@ -132,32 +132,38 @@ Vue.component('super-table',{
 Vue.component("super-page",{
 	template:'\
 	<div class="easyUtil-page">\
-		共{{totalPage}}页\
-		<button @click="pageDown" :disabled="currentPage <= min"><<</button>\
-		当前第<input :id="inputId" type="text" :value="currentPage" @change="pageChange">页\
-		<button @click="pageUp" :disabled="currentPage >= max">>></button>\
-		<button @click="goToPage">go</button>\
+	  <span v-if="show==0">共 {{totalPage}} 页</span>\
+		<span v-if="show==1">共 {{totalNum}} 条数据</span>\
+		<span class="btn" @click="pageDown" :disabled="currentPage <= min"> << </span>\
+		<span>{{currentPage}}</span>\
+		<span class="btn" @click="pageUp" :disabled="currentPage >= max"> >> </span>\
+		<input type="text" :value="currentPage" @change="pageChange" @blur="goToPage">\
 	</div>',
 	props:{
-		min:{
+		min:{    //最小页码
 			type:Number,
 			default:1
 		},
-		max:{
+		max:{    //最大页码
 			type:Number,
 			default:Infinity
 		},
-		value:{
+		nums:{    //最大数据量
+			type:Number,
+			default:Infinity
+		},
+		value:{   //当前页码
 			type:Number,
 			default:1
 		},
-		pageid:{
+		show:{   //显示样式0为总页码,1为总数据
 			type:String,
-			default:""
+			default:"0"
 		}
 	},
 	data:function(){
 		return {
+			totalNum : this.nums,
 			totalPage : this.max,
 			currentPage : this.value,
 			inputId: this.pageid

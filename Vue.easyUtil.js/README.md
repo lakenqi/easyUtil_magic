@@ -9,7 +9,7 @@
  * <strong>2.j-date日期组件:</strong>在父级组件上用id，defalulttext属性，分别命名组件的id和默认显示文本,</br>
  						&emsp;&emsp;&emsp;&emsp;本组建基于jquery.jedate插件，需要引入，并用其方法初始化，同时需要easyUtil.css及jedate.css样式支持</br>
 * <strong>3.v-outsideclose指令:</strong>如有点击外部任意地方关闭菜单的需求，可使用该组件，绑定对应的关闭函数名称即可</br>
-* <strong>4.super-table表格组件:</strong>父级组件上使用如下属性：</br>
+* <strong>4.super-table表格组件:</strong>父级组件上使用如下属性：也可参考demo文件使用</br>
 										&emsp;&emsp;&emsp;&emsp;'maindiv',  //主divid</br>
 										&emsp;&emsp;&emsp;&emsp;'bodydiv',  //表格bodydivid</br>
 										&emsp;&emsp;&emsp;&emsp;'head',   //表头id</br>
@@ -34,7 +34,10 @@
 					\<div class="easyUtil-noContent" v-show="show">\暂无内容\</div>\
 				\</template>\"</br>
  						&emsp;&emsp;&emsp;&emsp;样式需引入easyUtil.css即可。</br>
-* <strong>5.super-page分页组件:</strong>父级组件上使用如下属性：</br>
+* <strong>5.super-page分页组件:</strong>父级组件上使用如下属性：也可参考demo文件使用</br>
+										&emsp;&emsp;&emsp;&emsp;'v-model="value"',  
+										&emsp;&emsp;&emsp;&emsp;'show=1',  
+										&emsp;&emsp;&emsp;&emsp;':nums="totalNums"',  
 										&emsp;&emsp;&emsp;&emsp;':max="totalPage"',  
 										&emsp;&emsp;&emsp;&emsp;'@down="getPageNum"',   
 										&emsp;&emsp;&emsp;&emsp;'@up="getPageNum"',   

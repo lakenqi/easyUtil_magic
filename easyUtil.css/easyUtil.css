@@ -137,6 +137,29 @@ a{
 	transition: visibility 0s .4s;
 }
 /* ============================================================================== */
+/* ============================== pageModel Css ========================================= */
+.easyUtil-page{
+	min-width: 25%;
+}
+.easyUtil-page *{
+	color: #54C9FF;
+	font-size: 1.03vw;
+	white-space: pre;
+}
+.easyUtil-page .btn{
+	font-size: 0.8vw;
+	cursor: pointer;
+	vertical-align: 1px;
+}
+.easyUtil-page input{
+	width: 45px;
+	border: 1px solid #54C9FF;
+	padding-left: 0.3em;
+	color: #fff;
+	line-height: 2.5ex;
+	vertical-align: -1px;
+}
+/* ========================================================================================= */
 /* = progressBar css = */
 .easyUtil-progressBar{
 	display: -webkit-flex;
