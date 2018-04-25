@@ -140,6 +140,7 @@ a{
 /* ============================== pageModel Css ========================================= */
 .easyUtil-page{
 	min-width: 25%;
+	height: 2em;
 }
 .easyUtil-page *{
 	color: #54C9FF;
@@ -289,10 +290,10 @@ a{
 }
 /* = hoverColor = */
 .easyUtil-table tbody tr:hover{
-	background-color: rgba(0,114,152,0.7);
+	background-color: rgba(0,114,152,0.7) !important;
 }
 .easyUtil-table .tbody .tr:hover{
-	background-color: rgba(0,114,152,0.7);
+	background-color: rgba(0,114,152,0.7) !important;
 }
 /* ====================================================================== */
 
