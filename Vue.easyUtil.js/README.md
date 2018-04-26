@@ -45,7 +45,11 @@
 * <strong>6.super-bar  div生成横向bar图带数字:</strong>父级组件上使用如下属性：</br>
 							&emsp;&emsp;&emsp;&emsp;'bar=""', 柱图宽度  
 							&emsp;&emsp;&emsp;&emsp;'value=""', 对应的值   
-								
+* <strong>7.super-progressbar  进度条 带名称 数字跟随 显示百分比:</strong>父级组件上使用如下属性：</br>
+							&emsp;&emsp;&emsp;&emsp;'name=""', 名称  
+							&emsp;&emsp;&emsp;&emsp;'value=""', 对应的值
+							&emsp;&emsp;&emsp;&emsp;'color=""', 对应的颜色 	
+							&emsp;&emsp;&emsp;&emsp;'percent=""', 对应的百分比 							
 
 		
 

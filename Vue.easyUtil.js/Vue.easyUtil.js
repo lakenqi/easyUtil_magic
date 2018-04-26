@@ -248,6 +248,36 @@ Vue.component('super-bar',{
 	}
 });
 //  ========== 
+//  ========== 
+//  = 进度条组件 名称 数字跟随 显示百分比 = 
+Vue.component('super-progressbar',{
+	template:'\
+	<div class="easyUtil-progressBar">\
+		<div>{{type}}</div>\
+		<div class="easyUtil-numDiv" :class="colorClass">\
+			<div :style="styles">{{val}}</div>\
+		</div>\
+		<div>{{width}}</div>\
+		<div class="easyUtil-outProBar">\
+			<div class="easyUtil-inProBar" :class="colorClass" :style="styles"></div>\
+		</div>\
+	</div>',
+	props:["name","value","color","percent"],
+	data:function(){
+		return {
+			width:this.percent,
+			val :this.value,
+			colorClass: this.color,
+			type : this.name
+		}
+	},
+	computed:{
+		styles:function(){
+			return {"width": this.width};
+		},
+	}
+});
+//  ========== 
 //====================================组件部分结束====================================
 //====================================指令部分====================================
 //  = 自定义外部点击关闭指令 = 
