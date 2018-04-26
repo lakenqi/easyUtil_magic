@@ -227,6 +227,27 @@ Vue.component("super-page",{
 	}
 });
 //  ========== 
+//  = div生成横向bar图带数字 =
+Vue.component('super-bar',{
+	template:'\
+	<div class="easyUtil-outBar">\
+		<div class="easyUtil-bar" :style="styles"></div>\
+		<span>{{val}}</span>\
+	</div>',
+	props:["bar","value"],
+	data:function(){
+		return {
+			barWidth:this.bar,
+			val :this.value
+		}
+	},
+	computed:{
+		styles:function(){
+			return {"width": this.barWidth+"%"};
+		},
+	}
+});
+//  ========== 
 //====================================组件部分结束====================================
 //====================================指令部分====================================
 //  = 自定义外部点击关闭指令 = 

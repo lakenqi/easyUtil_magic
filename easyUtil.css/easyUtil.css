@@ -161,8 +161,8 @@ a{
 	vertical-align: -1px;
 }
 /* ========================================================================================= */
-/* = progressBar css = */
-.easyUtil-progressBar{
+/* ============================ progressBar css =================================== */
+.easyUtil-progressBar{   /*mainDiv*/
 	display: -webkit-flex;
     display: flex;
     justify-content: space-between;
@@ -171,18 +171,43 @@ a{
 	-ms-flex-wrap: wrap;
 	margin: 1em auto;
 }
-.easyUtil-outBarDiv{
+.easyUtil-numDiv{   /*num for bar*/
+	font-size: 0.8vw;
+	line-height: 4ex;
+	text-align: right;
+	width: 77%;
+}
+.easyUtil-numDiv>div{  /*num animate for bar*/
+	transition: width .4s;
+}
+.easyUtil-outProBar{ 
 	width: 100%;
 	height: 10px;
 	background-color: rgba(2, 88, 133, 0.3)
 }
-.easyUtil-inBarDiv{
+.easyUtil-inProBar{  
 	border-radius: 0 5px 5px 0px;
 	background-color: currentcolor/* #54C9FF*/;
 	height: 100%;
 	transition: width .4s;
 }
-/* ========== */
+/* ================================================================================ */
+/* ================================= ranking bar  ============================= */
+.easyUtil-outBar{  
+	width: 84%;
+	height: 10px;
+}
+.easyUtil-bar{
+	transition: width .4s;
+	display: inline-block;
+	height: 100%;
+	max-width: 100%;
+	border-radius: 0 5px 5px 0;
+	background:-moz-linear-gradient(left, #54C9FF, #78FF00);
+	background: -webkit-linear-gradient(left, #54C9FF, #78FF00);
+	background: linear-gradient(left, #54C9FF, #78FF00);
+}
+/* ======================================================================== */
 /* ========================table serise=================================== */
 /* = table = */
 .easyUtil-table{
@@ -198,12 +223,12 @@ a{
 }
 .easyUtil-table > thead > tr > th{
 	border-bottom: none !important;
-	padding: 8px 4px !important;
+	padding: 1.33vh 4px !important;
 	font-size: 1vw;
 }
 .easyUtil-table > tbody > tr > td{
  	border-top: none !important;
- 	padding: 8px 4px !important;
+ 	padding: 1.33vh 4px !important;
  	font-size: 0.9vw;
 }
 .thead,.tbody{
@@ -222,13 +247,13 @@ a{
 }
 .easyUtil-table > .thead >.tr >.th{
 	border-bottom: none !important;
-	padding: 8px 4px !important;
+	padding: 1.33vh 4px !important;
 	font-size: 1vw;
 	box-sizing: border-box;
 }
 .easyUtil-table > .tbody >.tr>.td{
  	border-top: none !important;
- 	padding: 8px 4px !important;
+ 	padding: 1.33vh 4px !important;
  	font-size: 0.9vw;
  	box-sizing: border-box;
 }
