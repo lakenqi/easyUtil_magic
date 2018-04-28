@@ -20,6 +20,7 @@ a:hover,a:focus,a:active,a:visited,a:link{
 html,body{
 	font-size: 1vw;
 	color: #FFFFFF;
+	cursor: default;
 }
 * {
     margin: 0px;
@@ -36,7 +37,6 @@ img{
 }
 ul li{
     list-style: none; 
-    cursor : pointer;
 }
 button{
     background:none;
@@ -206,6 +206,7 @@ a{
 	background:-moz-linear-gradient(left, #54C9FF, #78FF00);
 	background: -webkit-linear-gradient(left, #54C9FF, #78FF00);
 	background: linear-gradient(left, #54C9FF, #78FF00);
+	background-color: #54C9FF;   /*for IE*/
 }
 /* ======================================================================== */
 /* ========================table serise=================================== */
@@ -323,6 +324,14 @@ a{
 /* ====================================================================== */
 
 /* ============================= specail CSS ============================= */
+.easyUtil-colorLine{
+	color: #86FAFF;
+    background-image: -webkit-linear-gradient(white,rgba(134, 250, 255, 1.0), #025885);
+	background-image: -moz-linear-gradient(white, rgba(134, 250, 255, 1.0), #025885) ;
+	background-image: linear-gradient(white,rgba(134, 250, 255, 1.0), #025885) ;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 .easyUtil-moreLightBox{
     box-shadow: 0px 0px 10px #4dbeff;
 }
@@ -527,6 +536,19 @@ border-radius:100px;*/
     } 
 @-webkit-keyframes out{ 0%{ border-radius: 50%;} 100%{ border-radius: 10%;} } 
 @keyframes out{ 0%{ border-radius: 50%;} 100%{ border-radius: 10%;} }
+/*=====roll====*/
+@keyframes rollup {
+    0% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+    100% {
+        -webkit-transform: translate3d(0, -2000%, 0);
+        transform: translate3d(0, -2000%, 0);
+        display: none;
+    }
+}
+
 
 /* =============================================================================== */
 
