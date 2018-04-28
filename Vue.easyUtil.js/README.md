@@ -35,21 +35,21 @@
 				\</template>\"</br>
  						&emsp;&emsp;&emsp;&emsp;样式需引入easyUtil.css即可。</br>
 * <strong>5.super-page  分页组件:</strong>父级组件上使用如下属性：也可参考demo文件使用</br>
-										&emsp;&emsp;&emsp;&emsp;'v-model="value"',  
-										&emsp;&emsp;&emsp;&emsp;'show=1',  
-										&emsp;&emsp;&emsp;&emsp;':nums="totalNums"',  
-										&emsp;&emsp;&emsp;&emsp;':max="totalPage"',  
-										&emsp;&emsp;&emsp;&emsp;'@down="getPageNum"',   
-										&emsp;&emsp;&emsp;&emsp;'@up="getPageNum"',   
-										&emsp;&emsp;&emsp;&emsp;'@go="getPageNum"', 
+										&emsp;&emsp;&emsp;&emsp;'v-model="value"',  </br>
+										&emsp;&emsp;&emsp;&emsp;'show=1',  </br>
+										&emsp;&emsp;&emsp;&emsp;':nums="totalNums"', </br> 
+										&emsp;&emsp;&emsp;&emsp;':max="totalPage"', </br> 
+										&emsp;&emsp;&emsp;&emsp;'@down="getPageNum"', </br>  
+										&emsp;&emsp;&emsp;&emsp;'@up="getPageNum"', </br>  
+										&emsp;&emsp;&emsp;&emsp;'@go="getPageNum"', </br>
 * <strong>6.super-bar  div生成横向bar图带数字:</strong>父级组件上使用如下属性：</br>
-							&emsp;&emsp;&emsp;&emsp;'bar=""', 柱图宽度  
-							&emsp;&emsp;&emsp;&emsp;'value=""', 对应的值   
+							&emsp;&emsp;&emsp;&emsp;'bar=""', 柱图宽度  </br>
+							&emsp;&emsp;&emsp;&emsp;'value=""', 对应的值 </br>  
 * <strong>7.super-progressbar  进度条 带名称 数字跟随 显示百分比:</strong>父级组件上使用如下属性：</br>
-							&emsp;&emsp;&emsp;&emsp;'name=""', 名称  
-							&emsp;&emsp;&emsp;&emsp;'value=""', 对应的值
-							&emsp;&emsp;&emsp;&emsp;'color=""', 对应的颜色 	
-							&emsp;&emsp;&emsp;&emsp;'percent=""', 对应的百分比 							
+							&emsp;&emsp;&emsp;&emsp;'name=""', 名称  </br>
+							&emsp;&emsp;&emsp;&emsp;'value=""', 对应的值</br>
+							&emsp;&emsp;&emsp;&emsp;'color=""', 对应的颜色 </br>	
+							&emsp;&emsp;&emsp;&emsp;'percent=""', 对应的百分比 </br>							
 
 		
 
