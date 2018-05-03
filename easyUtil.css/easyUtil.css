@@ -258,8 +258,28 @@ a{
  	font-size: 0.9vw;
  	box-sizing: border-box;
 }
-
- /*counter*/
+/* = changeColor = */
+.easyUtil-table tbody tr:nth-child(even){
+	background-color: rgba(0,114,152,0.25);
+}
+.easyUtil-table tbody tr:nth-child(odd){
+	background-color: rgba(255,255,255,0);
+}
+.easyUtil-table .tbody .tr:nth-child(even){
+	background-color: rgba(0,114,152,0.25);
+}
+.easyUtil-table .tbody .tr:nth-child(odd){
+	background-color: rgba(255,255,255,0);
+}
+/* = hoverColor = */
+.easyUtil-table tbody tr:hover{
+	background-color: rgba(0,114,152,0.7) !important;
+}
+.easyUtil-table .tbody .tr:hover{
+	background-color: rgba(0,114,152,0.7) !important;
+}
+/* ====================================================================== */
+/* ==================================  counter ================================ */
 .easyUtil-startCounter{
 	counter-reset: xuhao;
 }
@@ -300,29 +320,7 @@ a{
 	margin: 7%;*/
 	/*vertical-align: -0.45em;*/
 }
- 
-/* = changeColor = */
-.easyUtil-table tbody tr:nth-child(even){
-	background-color: rgba(0,114,152,0.25);
-}
-.easyUtil-table tbody tr:nth-child(odd){
-	background-color: rgba(255,255,255,0);
-}
-.easyUtil-table .tbody .tr:nth-child(even){
-	background-color: rgba(0,114,152,0.25);
-}
-.easyUtil-table .tbody .tr:nth-child(odd){
-	background-color: rgba(255,255,255,0);
-}
-/* = hoverColor = */
-.easyUtil-table tbody tr:hover{
-	background-color: rgba(0,114,152,0.7) !important;
-}
-.easyUtil-table .tbody .tr:hover{
-	background-color: rgba(0,114,152,0.7) !important;
-}
-/* ====================================================================== */
-
+/* ===================================================================== */
 /* ============================= specail CSS ============================= */
 .easyUtil-colorLine{
 	color: #86FAFF;
@@ -538,6 +536,10 @@ border-radius:100px;*/
 @-webkit-keyframes out{ 0%{ border-radius: 50%;} 100%{ border-radius: 10%;} } 
 @keyframes out{ 0%{ border-radius: 50%;} 100%{ border-radius: 10%;} }
 /*=====roll====*/
+.easyUtil-roll{
+    -webkit-animation: 105s rollup linear infinite normal;
+    animation: 105s rollup linear infinite normal;
+}
 @keyframes rollup {
     0% {
         -webkit-transform: translate3d(0, 0, 0);
