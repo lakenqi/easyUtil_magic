@@ -16,3 +16,4 @@
 * 13.easyUtil-blinBlink ： 闪烁动画</br>
 * 14.easyUtil-roll ： 自动滚屏动画，实现自下而上的跑马灯效果</br>
 * 15.easyUtil-loading ： 加载动画类，父级容器引入该类，子级为img标签，可实现自适应当前父级容器大小的加载动画，一般用于局部内容，如表格的滚动加载</br>
+* 14.easyUtil-blueForm ： 蓝色input边框</br>
