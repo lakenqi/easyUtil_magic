@@ -1,13 +1,8 @@
 # <h1>jquery.easyUtil</h1></br>
  * <h3>Introduce</h3>
  * <h3>部分插件方法结合了外部其他插件，首先感谢创造这些方法的大神们，所有用于支持的插件，收录于support文件夹下，如果这些支持插件的完整版，请去对应的官网下载</h3>
- * <h5>先来个题外话，core文件夹中的easyUtil.css是一组常用的css样式总结，内部有注释，引入后可直接控制常用样式，如去除浏览器默认外边距，去除a标签下划线及ul标签圆点，其他均为类样式，使用时直接引入名称即可。如有冲突，直接在其他css中覆盖即可</h5>
- * <h3>以下正式介绍</h3>
- * <h3>为便于使用jquery.easyUtil插件现在分为完全版（位于easyUtil_core文件夹下的.all.js）和分项版（位于split文件夹下的各种名字版）</h3>
- * <h3>使用时，可根据需求引用不同的js，其中完全版涵盖除drag方法外（另见split文件下）的其他所有方法，文件体积较大。而分项版体积小，但是需配合引用.core.js后缀的核心js(位于easyUtil_core文件夹下)使用。</h3>
- * <h3>方法如果没有独立的js，则均在后缀core.js核心js中</h3>
- * <h3>在引入all后缀的完全版js，输入$.easyUtil()，可在浏览器控制台看到所包含的所有方法简介</h3>
- * <h3>drag方法的参数，参见split文件夹下内容，其余所有方法使用参数及描述如下：</h3>
+ * <h3>输入$.easyUtil()，可在浏览器控制台看到所包含的所有方法简介</h3>
+ * <h3>dragUtil拖拽元素方法的参数，参见support文件夹下js及drag.md内容，其余所有方法使用参数及描述如下：</h3>
  * <strong>1.$.log(message，title)</strong>带日期和格式化的控制台日志， 第一参数为日志内容，第二参数为日志标题为选填项（默认输出“log日志”）</br>
  * <strong>2.$.superAlert/superConfirm(options)   needs layer.js</strong></br>
  				&emsp;<strong>var option</strong> = {</br>
@@ -54,13 +49,7 @@
 				&emsp;};</br>
  * <strong>7.$.getRootPath()</strong></br>
  * <strong>8.$.getUrlParam()</strong></br>
- * <strong>9.$(selector).windowHeight(options) 设置屏幕高度，参数可不写，如有特殊处理参考如下：</strong></br>
- 			&emsp;<strong>var exemple</strong> = {</br>
- 					&emsp;&emsp;&emsp;<strong>specialElms :</strong> [],'选填，数组形式，如果有需要特殊调整高度的元素，写入此参数，注意仅限于</br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;动态取屏幕高度的元素，否则会减小到0'</br>
- 					&emsp;&emsp;&emsp;<strong>changeNums :</strong> [],'选填，数组形式，上述参数中需调整的高度，如果调整高度相同，写一个即可，</br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;否则需要与上述参数一一对应'</br>
- 					&emsp;&emsp;&emsp;<strong>isLog: </strong>false '是否输出内部日志，默认false'</br>
- 			&emsp;}</br>
- * <strong>10.$.superTimer(options) 统一设置js定时器管理，可自动激活和清除，也可通过事件驱动进行，详见参数设置'</strong></br>
+ * <strong>9.$.superTimer(options) 统一设置js定时器管理，可自动激活和清除，也可通过事件驱动进行，详见参数设置'</strong></br>
 			&emsp;<strong>var exemple</strong> = {</br>
 					&emsp;&emsp;&emsp;<strong>isInterval: </strong>'选填，是否循环定时，默认false',</br>
 					&emsp;&emsp;&emsp;<strong>times:</strong> '选填，[1000] 每个定时器的执行时间，单位毫秒，数组形式，默认一个时间：1000ms,如有多个触发时间，</br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;需要与定时器函数一一对应',</br>
@@ -76,7 +65,7 @@
 					&emsp;&emsp;&emsp;},</br>
 					&emsp;&emsp;&emsp;<strong>isLog:</strong> '是否输出内部自带日志,默认为false',</br>
 				&emsp;};</br>
- * <strong>11.$.optionCardSwitch(options) --设置选项卡切换div功能，可设置事件激活类型，设置动画，详见参数设置</strong></br>
+ * <strong>10.$.optionCardSwitch(options) --设置选项卡切换div功能，可设置事件激活类型，设置动画，详见参数设置</strong></br>
 			 &emsp; <strong>var example</strong> = {</br>
 							&emsp;&emsp;&emsp;<strong>triggerElm :</strong> '触发转换的元素.class或标签名,建议使用无序列表Ul li 必填',</br>
 								&emsp;&emsp;&emsp;<strong>switchElm :</strong> '转换div的主容器.Class,#id,或标签,建议使用DIV,必填',</br>
@@ -88,7 +77,7 @@
 								&emsp;&emsp;&emsp;<strong>hoverClass :</strong> '鼠标移动到选项卡的样式，选填',</br>
 								&emsp;&emsp;&emsp;<strong>isLog :</strong> 'false,是否输内部日志，默认false',</br>
 							&emsp;};</br>
- * <strong>12.$.autoFoldMenu(options) -- 设置菜单自动折叠和显示功能，该方法会在menuELm内部自动生成class为makeCss的div层，可用于修改菜单样式</strong></br>
+ * <strong>11.$.autoFoldMenu(options) -- 设置菜单自动折叠和显示功能，该方法会在menuELm内部自动生成class为makeCss的div层，可用于修改菜单样式</strong></br>
  				&emsp;<strong>var example</strong> = {</br>
  						&emsp;&emsp;&emsp;<strong>eventElm : </strong>'触发动作的元素,#id,.class,标签,必填',</br>
 						&emsp;&emsp;&emsp;<strong>menuElm :</strong> '做为菜单隐藏和显示的元素,#id,.class,标签,必填',</br>
@@ -100,7 +89,7 @@
 						&emsp;&emsp;&emsp;<strong>isMouseout : </strong>'false,是否在鼠标离开时自动隐藏所有菜单,默认false, 选填',</br>
 						&emsp;&emsp;&emsp;<strong>isLog :　</strong>'false,是否显示内部日志,默认false, 选填',</br>
 				&emsp;};</br>
-* <strong>13.$(selector).superTable(options) -- 克隆表格并赋值的功能，选择器为被赋值的table的id名称，需保证克隆模板的td上有class,且与javaBean属性对应</strong></br>
+* <strong>12.$(selector).superTable(options) -- 克隆表格并赋值的功能，选择器为被赋值的table的id名称，需保证克隆模板的td上有class,且与javaBean属性对应</strong></br>
  				&emsp;<strong>重要说明：由于基于class进行赋值，因此使用本方法，须确保克隆模版中的tr标签最内层标签（即直接填写text文本的标签）与javabean有对应名称的class</strong></br>
  				&emsp;<strong>var example</strong> = {</br>
  						&emsp;&emsp;&emsp;<strong>datas : </strong>'[] ajax或其他数据源传回的json数组，对象形式与javabean对应，必填',</br>
@@ -115,8 +104,8 @@
 						&emsp;&emsp;&emsp;<strong>specialFn:</strong>'function($tableNode){return $tableNode},其他特殊处理的自定义函数,内容自定义,</br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;只需注意要传入节点参数,返回节点参数(参数名自定义,也可使用默认名字)',</br>
 						&emsp;&emsp;&emsp;<strong>isLog :　</strong>'false,是否显示内部日志,默认false, 选填',</br>
 				&emsp;};</br>  
-* <strong>14.$(selector).initSelected(option)---自定义下拉菜单初始化操作，当使用了自定义下拉框时，可使用该方法初始化。参数为clickFn:function($elm){},点击选中项后触发的方法;自定义下拉菜单可参考easyUtil.css和Vue.easyUtil.js组件生成器，需要bootstrap.js文件'</strong></br>
-* <strong>15.$(selector).superScroll(options，test) -- 鼠标滚动异步加载数据的方法，需要配合jquery.mousewheel滚动事件插件使用,第二参数适用于jsonp,跨域请求,如果与服务器不在同一路径,则可通过下列test参数修改路径,详见参数设置</strong></br>
+* <strong>13.$(selector).initSelected(option)---自定义下拉菜单初始化操作，当使用了自定义下拉框时，可使用该方法初始化。参数为clickFn:function($elm){},点击选中项后触发的方法;自定义下拉菜单可参考easyUtil.css和Vue.easyUtil.js组件生成器，需要bootstrap.js文件'</strong></br>
+* <strong>14.$(selector).superScroll(options，test) -- 鼠标滚动异步加载数据的方法，需要配合jquery.mousewheel滚动事件插件使用,第二参数适用于jsonp,跨域请求,如果与服务器不在同一路径,则可通过下列test参数修改路径,详见参数设置</strong></br>
 			&emsp;<strong>var example</strong> = {</br>
  						&emsp;&emsp;&emsp;<strong>type : </strong>'post, Ajax加载类型，默认post',</br>
 						&emsp;&emsp;&emsp;<strong>data :</strong> '传入参数，与Ajax使用方式相同',</br>
@@ -136,9 +125,9 @@
 					&emsp;&emsp;&emsp;<strong>port:</strong> '8080,端口号,默认8080',</br>
 					&emsp;&emsp;&emsp;<strong>rootPath:</strong> '项目根路径,默认当前项目名称,书写时需要前面需要加"/"',</br>
 				&emsp;};</br>
-* <strong>16.$.superAjax(options,test)----ajax跨域请求jsonp方式，option内容与ajax参数相同，url只需填写映射名称即可，如类“映射名/方法映射名”，第二参数test是开启自定义地址的测试模式，参数及默认值为{head:“localhost”,port:“8080”,rootPath:“”}，可自定义修改地址</strong></br>
-* <strong>17.$.arrayUniqueMagic(array)----数组去重方法</strong></br>
-* <strong>18.$.upLoadMagic(options)----ajax上传文件，参数如下</strong></br>
+* <strong>15.$.superAjax(options,test)----ajax跨域请求jsonp方式，option内容与ajax参数相同，url只需填写映射名称即可，如类“映射名/方法映射名”，第二参数test是开启自定义地址的测试模式，参数及默认值为{head:“localhost”,port:“8080”,rootPath:“”}，可自定义修改地址</strong></br>
+* <strong>16.$.arrayUniqueMagic(array)----数组去重方法</strong></br>
+* <strong>17.$.upLoadMagic(options)----ajax上传文件，参数如下</strong></br>
 	&emsp;<strong>var example</strong> = {</br>
  						&emsp;&emsp;&emsp;<strong>paramsName : </strong>'[] 回传的参数名称，数组形式，必须与参数值一一对应，必填',</br>
 						&emsp;&emsp;&emsp;<strong>params :</strong> '[]，回传的参数值，数组形式，必须与参数名称一一对应，必填',</br>
@@ -147,7 +136,7 @@
 						&emsp;&emsp;&emsp;<strong>errorFn : </strong>'上传失败回调函数，默认alert弹框提示，选填,</br>
 						&emsp;&emsp;&emsp;<strong>isLog : </strong>'false,是否显示内部日志,默认false, 选填',</br>
 				&emsp;};</br>
-* <strong>19.$(selector).verifyCodeMagic(options)----验证码方法，包括生成和验证，参数如下</strong></br>
+* <strong>18.$(selector).verifyCodeMagic(options)----验证码方法，包括生成和验证，参数如下</strong></br>
 	&emsp;<strong>var example</strong> = {</br>
  						&emsp;&emsp;&emsp;<strong>imgId : </strong>'显示验证图片的标签ID，必填',</br>
 						&emsp;&emsp;&emsp;<strong>imgUrl :</strong> '调取图片的action，填入相对路径即可，如“/类映射名/方法映射名”，不用加aciton字样，必填',</br>
@@ -156,10 +145,18 @@
 						&emsp;&emsp;&emsp;<strong>checkFn : </strong>'自定义的验证函数，必填,</br>
 						&emsp;&emsp;&emsp;<strong>isLog : </strong>'false,是否显示内部日志,默认false, 选填',</br>
 				&emsp;};</br>   
-* <strong>20.$.createEchartsMagic(options),$.resizeEchartsMagic()----echarts生成和自适应屏幕方法，生成方式可返回echats的数组，可用于清除重新生成，顺序与以下参数一致，参数如下</strong></br>
+* <strong>19.$.createEchartsMagic(options),$.resizeEchartsMagic()----echarts生成和自适应屏幕方法，生成方式可返回echats的数组，可用于清除重新生成，顺序与以下参数一致，参数如下</strong></br>
 	&emsp;<strong>var example</strong> = {</br>
  						&emsp;&emsp;&emsp;<strong>chartsDatas : </strong>'[]echats参数变量名称，不用加引号，与下一项一一对应，必填',</br>
 						&emsp;&emsp;&emsp;<strong>chartsDivId :</strong> '[]生成echats的divId名称字符串，与上一项一一对应，必填',</br>
 						&emsp;&emsp;&emsp;<strong>isLog : </strong>'false,是否显示内部日志,默认false, 选填',</br>
-				&emsp;};</br> 
+				&emsp;};</br>
+* <strong>20.$(selector).magicTips(options)----提示框生成方法，可在对应selector下生成提示内容，参数如下：</strong></br>
+	&emsp;<strong>var example</strong> = {</br>
+ 						&emsp;&emsp;&emsp;<strong>title : </strong>'提示框标题，如没有可不写，选填',</br>
+						&emsp;&emsp;&emsp;<strong>content :</strong> '提示框内容，必填',</br>
+						&emsp;&emsp;&emsp;<strong>position : </strong>'[top,left],提示框距离鼠标位置偏移量，数组，如需调整，直接填入对应数字即可，选填',</br>
+						&emsp;&emsp;&emsp;<strong>speed : </strong>'400,提示框出现速度，单位毫秒，默认400毫秒，选填',</br>
+						&emsp;&emsp;&emsp;<strong>isLog : </strong>'false,是否显示内部日志,默认false, 选填',</br>
+				&emsp;};</br>  
 */
