@@ -132,8 +132,8 @@ Vue.component('super-table',{
 Vue.component("super-page",{
 	template:'\
 	<div class="easyUtil-page">\
-	  <span v-if="show==0">共 {{totalPage}} 页</span>\
-		<span v-if="show==1">共 {{totalNum}} 条数据</span>\
+	  <span v-if="show==0">共 {{max}} 页</span>\
+		<span v-if="show==1">共 {{nums}} 条数据</span>\
 		<span class="btn" @click="pageDown" :disabled="currentPage <= min"> << </span>\
 		<span>{{currentPage}}</span>\
 		<span class="btn" @click="pageUp" :disabled="currentPage >= max"> >> </span>\
@@ -163,8 +163,6 @@ Vue.component("super-page",{
 	},
 	data:function(){
 		return {
-			totalNum : this.nums,
-			totalPage : this.max,
 			currentPage : this.value,
 			inputId: this.pageid
 		}
@@ -176,7 +174,7 @@ Vue.component("super-page",{
 		},
 		value: function(data){
 			this.changeNum(data);
-		}
+		},
 	},
 	methods:{
 		pageDown:function(){
