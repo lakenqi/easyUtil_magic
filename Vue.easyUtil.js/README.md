@@ -34,7 +34,7 @@
 					\<div class="easyUtil-noContent" v-show="show">\暂无内容\</div>\
 				\</template>\"</br>
  						&emsp;&emsp;&emsp;&emsp;样式需引入easyUtil.css即可。</br>
-* <strong>5.super-page  分页组件:</strong>父级组件上使用如下属性：也可参考demo文件使用</br>
+* <strong>5.super-page  分页组件:上下翻页，回车或鼠标离开跳转自定义页码</strong>父级组件上使用如下属性：也可参考demo文件使用</br>
 										&emsp;&emsp;&emsp;&emsp;'v-model="value"',  </br>
 										&emsp;&emsp;&emsp;&emsp;'show=1',  </br>
 										&emsp;&emsp;&emsp;&emsp;':nums="totalNums"', </br> 

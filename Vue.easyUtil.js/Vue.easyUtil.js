@@ -137,7 +137,7 @@ Vue.component("super-page",{
 		<span class="btn" @click="pageDown" :disabled="currentPage <= min"> << </span>\
 		<span>{{currentPage}}</span>\
 		<span class="btn" @click="pageUp" :disabled="currentPage >= max"> >> </span>\
-		<input type="text" :value="currentPage" @change="pageChange" @blur="goToPage">\
+		<input type="text" :value="currentPage" @change="pageChange" @blur="goToPage" @keyup.enter="goToPage">\
 	</div>',
 	props:{
 		min:{    //最小页码
