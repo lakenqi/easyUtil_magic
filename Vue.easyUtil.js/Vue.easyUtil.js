@@ -87,7 +87,7 @@ Vue.component('super-table',{
 					<slot name="tbody"></slot>\
 				</div>\
 			</div>\
-			<slot></slot>\
+			<div class="easyUtil-noContent" v-show="emptyflag">{{noContent}}</div>\
 			<div id="managerLoading" class="easyUtil-hidden easyUtil-loading"><img :src="imgPath"/></div>\
 		</div>\
 	</div>',
@@ -100,7 +100,8 @@ Vue.component('super-table',{
 	'bodydivclass',  //表格body div class
 	'loadingpath',   //加载图表地址，有默认值
 	'iscounter',    //是否启用计数器
-	/*'emptytip'    //*/
+	'emptytip',    //空值内容
+	'emptyflag'   //是否无值
 	],
 	data:function () {
 		return {
@@ -111,11 +112,11 @@ Vue.component('super-table',{
 			mainClass : this.maindivclass,
 			bodyClass : this.bodydivclass,
 			imgPath : this.loadingpath || "../images/Loading6-3.gif",
-			/*noContent :　this.emptytip || "暂无数据",*/
 			showHead : false,
 			counterClass : this.iscounter,
 			headCounter : 'easyUtil-CounterHead',
-			bodyCounter : 'easyUtil-startCounter'
+			bodyCounter : 'easyUtil-startCounter',
+			noContent: this.emptytip || "暂无内容"
 		};
 	},
 	created:function () {

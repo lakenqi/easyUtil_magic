@@ -14,26 +14,12 @@
 										&emsp;&emsp;&emsp;&emsp;'bodydiv',  //表格bodydivid</br>
 										&emsp;&emsp;&emsp;&emsp;'head',   //表头id</br>
 										&emsp;&emsp;&emsp;&emsp;'body',   //表身id</br>
-										&emsp;&emsp;&emsp;&emsp;'maindivclass',  //主div class</br>
-										&emsp;&emsp;&emsp;&emsp;'bodydivclass',  //表格body div class</br>
-										&emsp;&emsp;&emsp;&emsp;'loadingpath',   //加载图表地址，有默认值</br>
-										&emsp;&emsp;&emsp;&emsp;'iscounter',    //是否启用计数器，分别命名组件的id和默认显示文本,</br>
-										&emsp;&emsp;&emsp;&emsp;可开启自定义表格及计数模式</br>
- 						&emsp;&emsp;&emsp;&emsp;在组件之间以如下模板引入对应的表格内容即可：</br>
- 						"\<template slot="thead">\
-						\<span class="th" style="width: 25%;">\表头内容\</span>\
-						\<span class="th" style="width: 20%;">\表头内容\</span>\
-						\</template>\
-						\<template slot="tbody">\
-					\<div class="tr" :class="rangClass(i)"  v-for="(data,i) in datas">\
-						\<span class="td" style="width: 25%;">\表格内容\</span>\
-						\<span class="td" style="width: 20%;">表格内容</span>\
-					\</div>\
-				\</template>\
-				\<template>\
-					\<div class="easyUtil-noContent" v-show="show">\暂无内容\</div>\
-				\</template>\"</br>
- 						&emsp;&emsp;&emsp;&emsp;样式需引入easyUtil.css即可。</br>
+										&emsp;&emsp;&emsp;&emsp;'emptyflag',   //显示无值内容标识</br>
+										&emsp;&emsp;&emsp;&emsp;'maindivclass',  //主div class，选填</br>
+										&emsp;&emsp;&emsp;&emsp;'bodydivclass',  //表格body div class，选填</br>
+										&emsp;&emsp;&emsp;&emsp;'loadingpath',   //加载图表地址，有默认值，选填</br>
+										&emsp;&emsp;&emsp;&emsp;'iscounter',    //是否启用计数器，分别命名组件的id和默认显示文本,可开启自定义表格及计数模式，选填</br>
+										&emsp;&emsp;&emsp;&emsp;'emptytip',   //无值提示内容，有默认值，选填</br>
 * <strong>5.super-page  分页组件:上下翻页，回车或鼠标离开跳转自定义页码</strong>父级组件上使用如下属性：也可参考demo文件使用</br>
 										&emsp;&emsp;&emsp;&emsp;'v-model="value"',  </br>
 										&emsp;&emsp;&emsp;&emsp;'show=1',  </br>
