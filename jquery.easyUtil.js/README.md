@@ -89,19 +89,11 @@
 						&emsp;&emsp;&emsp;<strong>isMouseout : </strong>'false,是否在鼠标离开时自动隐藏所有菜单,默认false, 选填',</br>
 						&emsp;&emsp;&emsp;<strong>isLog :　</strong>'false,是否显示内部日志,默认false, 选填',</br>
 				&emsp;};</br>
-* <strong>12.$(selector).superTable(options) -- 克隆表格并赋值的功能，选择器为被赋值的table的id名称，需保证克隆模板的td上有class,且与javaBean属性对应</strong></br>
+* <strong>12.$.sortMagic(options)---数组排序插件，可实现普通数组，对象数组的升序降序排序，参数设置如下：</strong></br>
  				&emsp;<strong>重要说明：由于基于class进行赋值，因此使用本方法，须确保克隆模版中的tr标签最内层标签（即直接填写text文本的标签）与javabean有对应名称的class</strong></br>
  				&emsp;<strong>var example</strong> = {</br>
- 						&emsp;&emsp;&emsp;<strong>datas : </strong>'[] ajax或其他数据源传回的json数组，对象形式与javabean对应，必填',</br>
-						&emsp;&emsp;&emsp;<strong>cloneTrId :</strong> '克隆的表格tr模板id #id形式，必填',</br>
-						&emsp;&emsp;&emsp;<strong>cloneEvent :</strong> 'false,是否克隆当前模板绑定的事件，默认false',</br>
-						&emsp;&emsp;&emsp;<strong>hiddenClass :</strong> 'false，默认false，如果隐藏使用class实现，则需写入该class且该class只有隐藏功能 ，选填',</br>
-						&emsp;&emsp;&emsp;<strong>specialClass : </strong>'[数组形式，是否有需要特殊处理的文本class名称，如有特殊处理的文本，</br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;则该项必填，否则以下特殊参数将无效，直接填入名称即可，选填，</br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;如果该项填入，则以下special开头的参数必须与之顺序一一对应，],</br>
-						&emsp;&emsp;&emsp;<strong>isCss :</strong> 'true，特殊项是否进行css处理，默认为true',</br>
-						&emsp;&emsp;&emsp;<strong>specialText : </strong>'[{},{}]数组形式的json，对应特殊处理的文本，有书写要求，键值对的形式，每一组一个json,</br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;如[{‘0’：‘是’,‘1’：‘否’}],每组json必须与specialClass顺序一一对应',</br>
-						&emsp;&emsp;&emsp;<strong>specialCssText :</strong> '[isCss为false,该项无效，数组形式，特殊css的文本，需要与cssClass参数顺序一一对应]',</br>
-						&emsp;&emsp;&emsp;<strong>specialCssClass :</strong> '[isCss为false,该项无效，数组形式，特殊处理的css类名称，如变颜色，仅处理特殊</br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;文本的样式，如果isOnlyCss为false，则所有special开头参数的顺序必须一一对应],</br>
-						&emsp;&emsp;&emsp;<strong>specialFn:</strong>'function($tableNode){return $tableNode},其他特殊处理的自定义函数,内容自定义,</br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;只需注意要传入节点参数,返回节点参数(参数名自定义,也可使用默认名字)',</br>
+ 						&emsp;&emsp;&emsp;<strong>flag : </strong>'对象数组，排序的属性名称，普通数组可以不填',</br>
+						&emsp;&emsp;&emsp;<strong>sort :</strong> '升序or降序，默认升序，填入desc为降序',</br>
 						&emsp;&emsp;&emsp;<strong>isLog :　</strong>'false,是否显示内部日志,默认false, 选填',</br>
 				&emsp;};</br>  
 * <strong>13.$(selector).initSelected(option)---自定义下拉菜单初始化操作，当使用了自定义下拉框时，可使用该方法初始化。参数为clickFn:function($elm){},点击选中项后触发的方法;自定义下拉菜单可参考easyUtil.css和Vue.easyUtil.js组件生成器，需要bootstrap.js文件'</strong></br>
