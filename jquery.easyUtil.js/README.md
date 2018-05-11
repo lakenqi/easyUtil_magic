@@ -90,7 +90,6 @@
 						&emsp;&emsp;&emsp;<strong>isLog :　</strong>'false,是否显示内部日志,默认false, 选填',</br>
 				&emsp;};</br>
 * <strong>12.$.sortMagic(options)---数组排序插件，可实现普通数组，对象数组的升序降序排序，参数设置如下：</strong></br>
- 				&emsp;<strong>重要说明：由于基于class进行赋值，因此使用本方法，须确保克隆模版中的tr标签最内层标签（即直接填写text文本的标签）与javabean有对应名称的class</strong></br>
  				&emsp;<strong>var example</strong> = {</br>
  						&emsp;&emsp;&emsp;<strong>flag : </strong>'对象数组，排序的属性名称，普通数组可以不填',</br>
 						&emsp;&emsp;&emsp;<strong>sort :</strong> '升序or降序，默认升序，填入desc为降序',</br>
