@@ -48,7 +48,7 @@
 					&emsp;&emsp;&emsp;<strong>isLog: </strong>'是否输出内部自带日志,默认为false',</br>
 				&emsp;};</br>
  * <strong>7.$.getRootPath()</strong></br>
- * <strong>8.$.getUrlParam()</strong></br>
+ * <strong>8.$.getUrlParam(data):</strong>获得url参数值,如不写具体参数名称，则返回url所有的参数名称及数值的对象数值</br>
  * <strong>9.$.superTimer(options) 统一设置js定时器管理，可自动激活和清除，也可通过事件驱动进行，详见参数设置'</strong></br>
 			&emsp;<strong>var exemple</strong> = {</br>
 					&emsp;&emsp;&emsp;<strong>isInterval: </strong>'选填，是否循环定时，默认false',</br>
