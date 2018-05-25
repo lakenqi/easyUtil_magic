@@ -82,7 +82,7 @@ Vue.component('super-table',{
 		</div>\
 		<div class="easyUtil-switchDiv easyUtil-hidden"></div>\
 		<div :id="bodyId" :class="bodyClass">\
-			<div :id="tbodyId" class="easyUtil-table" v-cloak>\
+			<div :id="tbodyId" class="easyUtil-table">\
 				<div class="tbody" :class="bodyCounter">\
 					<slot name="tbody"></slot>\
 				</div>\
@@ -135,10 +135,10 @@ Vue.component("super-page",{
 	<div class="easyUtil-page">\
 	  <span v-if="show==0">共 {{max}} 页</span>\
 		<span v-if="show==1">共 {{nums}} 条数据</span>\
-		<span class="btn" @click="pageDown" :disabled="currentPage <= min"> << </span>\
-		<span>{{currentPage}}</span>\
-		<span class="btn" @click="pageUp" :disabled="currentPage >= max"> >> </span>\
-		<input type="text" :value="currentPage" @change="pageChange" @blur="goToPage" @keyup.enter="goToPage">\
+		<span class="btn" @click="pageDown" :disabled="value <= min"> << </span>\
+		<span>{{value}}</span>\
+		<span class="btn" @click="pageUp" :disabled="value >= max"> >> </span>\
+		<input type="text" :value="value" @change="pageChange" @blur="goToPage" @keyup.enter="goToPage">\
 	</div>',
 	props:{
 		min:{    //最小页码
@@ -164,12 +164,11 @@ Vue.component("super-page",{
 	},
 	data:function(){
 		return {
-			currentPage : this.value,
 			inputId: this.pageid
 		}
 	},
 	watch:{
-		currentPage:function(data){
+		value:function(data){
 			this.$emit('input',data);
 			this.$emit('on-change',data);
 		},
@@ -179,21 +178,21 @@ Vue.component("super-page",{
 	},
 	methods:{
 		pageDown:function(){
-			if(this.currentPage <= this.min){
+			if(this.value <= this.min){
 				return;
 			}
-			this.currentPage -= 1;
-			this.$emit('down',this.currentPage);
+			this.value -= 1;
+			this.$emit('down',this.value);
 		},
 		pageUp:function(){
-			if(this.currentPage >= this.max){
+			if(this.value >= this.max){
 				return;
 			}
-			this.currentPage += 1;
-			this.$emit('up',this.currentPage);
+			this.value += 1;
+			this.$emit('up',this.value);
 		},
 		goToPage: function(){
-			this.$emit('go',this.currentPage);
+			this.$emit('go',this.value);
 		},
 		changeNum:function(data){
 			if(data < this.min){
@@ -210,14 +209,14 @@ Vue.component("super-page",{
 					regex = /^[0-9]*$/;
 			if(regex.test(val)){
 				val = parseInt(val,10);
-				this.currentPage = val;
+				this.value = val;
 				if(val > max){
-					this.currentPage = max;
+					this.value = max;
 				}else if(val < min){
-					this.currentPage = min;
+					this.value = min;
 				}
 			}else{
-				e.target.value = this.currentPage;
+				e.target.value = this.value;
 			}
 		}
 	},
