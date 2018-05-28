@@ -135,9 +135,9 @@ Vue.component("super-page",{
 	<div class="easyUtil-page">\
 	  <span v-if="show==0">共 {{max}} 页</span>\
 		<span v-if="show==1">共 {{nums}} 条数据</span>\
-		<span class="btn" @click="pageDown" :disabled="value <= min"> << </span>\
-		<span>{{value}}</span>\
-		<span class="btn" @click="pageUp" :disabled="value >= max"> >> </span>\
+		<span class="btn" @click="pageDown" :disabled="currentVal <= min"> << </span>\
+		<span>{{currentVal}}</span>\
+		<span class="btn" @click="pageUp" :disabled="currentVal >= max"> >> </span>\
 		<input type="text" :value="value" @change="pageChange" @blur="goToPage" @keyup.enter="goToPage">\
 	</div>',
 	props:{
@@ -164,11 +164,12 @@ Vue.component("super-page",{
 	},
 	data:function(){
 		return {
-			inputId: this.pageid
+			inputId: this.pageid,
+			currentVal : this.value
 		}
 	},
 	watch:{
-		value:function(data){
+		currentVal:function(data){
 			this.$emit('input',data);
 			this.$emit('on-change',data);
 		},
@@ -178,21 +179,21 @@ Vue.component("super-page",{
 	},
 	methods:{
 		pageDown:function(){
-			if(this.value <= this.min){
+			if(this.currentVal <= this.min){
 				return;
 			}
-			this.value -= 1;
-			this.$emit('down',this.value);
+			this.currentVal -= 1;
+			this.$emit('down',this.currentVal);
 		},
 		pageUp:function(){
-			if(this.value >= this.max){
+			if(this.currentVal >= this.max){
 				return;
 			}
-			this.value += 1;
-			this.$emit('up',this.value);
+			this.currentVal += 1;
+			this.$emit('up',this.currentVal);
 		},
 		goToPage: function(){
-			this.$emit('go',this.value);
+			this.$emit('go',this.currentVal);
 		},
 		changeNum:function(data){
 			if(data < this.min){
@@ -201,6 +202,7 @@ Vue.component("super-page",{
 			if(data > this.max){
 				data = this.max;
 			}
+			this.currentVal = data;
 		},
 		pageChange:function(e){
 			var val = e.target.value.trim(),
@@ -209,14 +211,14 @@ Vue.component("super-page",{
 					regex = /^[0-9]*$/;
 			if(regex.test(val)){
 				val = parseInt(val,10);
-				this.value = val;
+				this.currentVal = val;
 				if(val > max){
-					this.value = max;
+					this.currentVal = max;
 				}else if(val < min){
-					this.value = min;
+					this.currentVal = min;
 				}
 			}else{
-				e.target.value = this.value;
+				e.target.value = this.currentVal;
 			}
 		}
 	},
