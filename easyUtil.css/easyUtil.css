@@ -18,7 +18,7 @@ a:hover,a:focus,a:active,a:visited,a:link{
 	display: none;
 }
 html,body{
-	font-size: 1vw;
+	font-size: 1vw !important;
 	color: #FFFFFF;
 	cursor: default;
 }
@@ -217,7 +217,7 @@ a{
 	text-align: center;
 	border-spacing: 0;
 	border-collapse: collapse;
-	border: 1px #3d7295 solid;
+	/*border: 1px #3d7295 solid;*/
 }
 .easyUtil-table > thead > tr{
 	background-color:rgba(32,99,204,0.7);
@@ -244,7 +244,7 @@ a{
 	display: table-cell !important;
 }
 .easyUtil-table > .thead >.tr {
-	background-color:rgba(32,99,204,0.7);
+	background-color:rgba(0,114,152,0.9);
 }
 .easyUtil-table > .thead >.tr >.th{
 	border-bottom: none !important;
@@ -766,6 +766,9 @@ border-radius:100px;*/
 .dropdown {
   z-index: 2;
   position: relative;
+}
+.dropdown span{
+	color: #FFFFFF;
 }
 .dropdown li{
 	display: block !important;
