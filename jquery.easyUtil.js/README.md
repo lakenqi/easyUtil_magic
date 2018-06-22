@@ -149,5 +149,11 @@
 						&emsp;&emsp;&emsp;<strong>position : </strong>'[top,left],提示框距离鼠标位置偏移量，数组，如需调整，直接填入对应数字即可，选填',</br>
 						&emsp;&emsp;&emsp;<strong>speed : </strong>'400,提示框出现速度，单位毫秒，默认400毫秒，选填',</br>
 						&emsp;&emsp;&emsp;<strong>isLog : </strong>'false,是否显示内部日志,默认false, 选填',</br>
-				&emsp;};</br>  
+				&emsp;};</br>
+* <strong>21.$.xPathMagic(options)----xPath获取方式，参数如下：</strong></br>
+	&emsp;<strong>var example</strong> = {</br>
+ 						&emsp;&emsp;&emsp;<strong>element : </strong>'元素节点，必填',</br>
+						&emsp;&emsp;&emsp;<strong>ebody :</strong> '寻找的body范围，默认document.body,如果是iframe，需要写明',</br>
+						&emsp;&emsp;&emsp;<strong>isLog : </strong>'false,是否显示内部日志,默认false, 选填',</br>
+				&emsp;};</br>   
 */
