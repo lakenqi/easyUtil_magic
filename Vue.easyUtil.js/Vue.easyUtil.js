@@ -278,6 +278,25 @@ Vue.component('super-progressbar',{
 	}
 });
 //  ========== 
+//  = 圆形按钮 = 
+Vue.component('round-menu',{
+	template:'\
+	<div class="menuMainDivR">\
+	    <div class="menuContainerR">\
+	        <ul class="mainMenu">\
+	            <li class="mainMenuText"><a>{{menu}}</a>\
+	                <ul class="firstMenu">\
+	                    <slot>\
+												<li id="clearBtn" class="firstMenuText"><a><span>啥也没有</span></a></li>\
+										   </slot>\
+	                </ul>\
+	            </li>\
+	        </ul>\
+	    </div>\
+	</div>',
+	props:['menu']
+});
+//  ========== 
 //====================================组件部分结束====================================
 //====================================指令部分====================================
 //  = 自定义外部点击关闭指令 = 
