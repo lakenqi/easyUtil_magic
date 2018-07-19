@@ -1,15 +1,1 @@
-define(function(require,exports,module){
-	function layer(text,time){
-		var ele = document.createElement('div');
-		ele.id = new Date().getTime();
-		ele.className = "easyUtil-fixedBody easyUtil-layer";
-		var content = document.createTextNode(text);
-		ele.appendChild(content);
-		document.body.appendChild(ele);
-		//删除
-		/*setTimeout(function(){
-			document.body.removeChild(ele);
-		},time)*/
-	}
-	exports.layer = layer;
-});
+eval(function(p,a,c,k,e,d){e=function(c){return(c<a?"":e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)d[e(c)]=k[c]||e(c);k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1;};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p;}('g(3(i,9,h){3 2(8,b){7 0=1.f(\'d\');0.e=c n().o();0.p="6-m 6-2";7 5=1.j(8);0.4(5);1.a.4(0);k(3(){1.a.l(0)},b)}9.2=2});',26,26,'ele|document|layer|function|appendChild|content|easyUtil|var|text|exports|body|time|new|div|id|createElement|define|module|require|createTextNode|setTimeout|removeChild|fixedBody|Date|getTime|className'.split('|'),0,{}))
