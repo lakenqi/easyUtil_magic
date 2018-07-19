@@ -18,7 +18,7 @@ a:hover,a:focus,a:active,a:visited,a:link{
 	display: none;
 }
 html,body{
-	font-size: 1vw !important;
+	font-size: 1vw;
 	color: #FFFFFF;
 	cursor: default;
 }
@@ -42,6 +42,7 @@ button{
     background:none;
     border: none;
     cursor: pointer;
+    white-space: pre;
 }
 input{
 	background: none;
@@ -58,7 +59,7 @@ input[type=color]{
     float: right;
 }
 h3{
-	font-size: 1.09vw;
+	font-size: 1.2vw;
 	margin: 0.1em 0px 0.4em 0.4em;
 }
 input,img,textarea{
@@ -209,6 +210,18 @@ a{
 	background-color: #54C9FF;   /*for IE*/
 }
 /* ======================================================================== */
+/* ==================================== tips ======================= */
+.easyUtil-layer{
+	z-index: 5;
+	text-align: center;
+	max-width: 24%;
+	height: 10%;
+	vertical-align: baseline;
+	line-height: 8ex;
+	background-color: rgba(0,0,0,0.7);
+	border-radius: 5px;
+}
+/* =========================================================== */
 /* ========================table serise=================================== */
 /* = table = */
 .easyUtil-table{
@@ -220,9 +233,14 @@ a{
 	/*border: 1px #3d7295 solid;*/
 }
 .easyUtil-table > thead > tr{
-	background-color:rgba(32,99,204,0.7);
+	background-color:rgba(1,54,106,0);
 }
 .easyUtil-table > thead > tr > th{
+	border-bottom: none !important;
+	padding: 1.33vh 4px !important;
+	font-size: 1vw;
+}
+.easyUtil-table > thead > tr > td{
 	border-bottom: none !important;
 	padding: 1.33vh 4px !important;
 	font-size: 1vw;
@@ -242,9 +260,10 @@ a{
 }
 .td,.th{
 	display: table-cell !important;
+	white-space: pre;
 }
 .easyUtil-table > .thead >.tr {
-	background-color:rgba(0,114,152,0.9);
+	background-color:rgba(1,54,106,0);
 }
 .easyUtil-table > .thead >.tr >.th{
 	border-bottom: none !important;
@@ -260,23 +279,23 @@ a{
 }
 /* = changeColor = */
 .easyUtil-table tbody tr:nth-child(even){
-	background-color: rgba(0,114,152,0.25);
+	background-color:rgba(1,54,106,0);
 }
 .easyUtil-table tbody tr:nth-child(odd){
-	background-color: rgba(255,255,255,0);
+	background-color: rgba(0,132,192,0.2);
 }
 .easyUtil-table .tbody .tr:nth-child(even){
-	background-color: rgba(0,114,152,0.25);
+	background-color:rgba(1,54,106,0);
 }
 .easyUtil-table .tbody .tr:nth-child(odd){
-	background-color: rgba(255,255,255,0);
+	background-color: rgba(0,132,192,0.2);
 }
 /* = hoverColor = */
 .easyUtil-table tbody tr:hover{
-	background-color: rgba(0,114,152,0.7) !important;
+	background-color: #0084c0 !important;
 }
 .easyUtil-table .tbody .tr:hover{
-	background-color: rgba(0,114,152,0.7) !important;
+	background-color: #0084c0 !important;
 }
 /* ====================================================================== */
 /* ==================================  counter ================================ */
@@ -360,25 +379,25 @@ a{
 }
 /*fontCSS*/
 .easyUtil-fOrange{
-    color: #FFB400 !important;  
+    color: #ffa200 !important;  
 }
 .easyUtil-fBlue{
-    color: #54C9FF !important;
+    color: #3ae1e9 !important;
 }
 .easyUtil-fDarkBlue{
-    color: #025885 !important;
+    color: #5dccff !important;
 }
 .easyUtil-fLightBlue{
 	color: #86FAFF !important;
 }
 .easyUtil-fGreen{
-    color: #78FF00 !important;
+    color: #08fd1c !important;
 }
 .easyUtil-fYellow{
-    color: #FFF600 !important;
+    color: #fffc00 !important;
 }
 .easyUtil-fPinkRed{
-    color: #EA00FF !important;
+    color: #ea00ff !important;
 }
 .easyUtil-fRed{
     color: #d6505f !important;
@@ -431,10 +450,6 @@ a{
     border-radius: 0px;
     box-shadow: 0px 0px 10px rgba(45,123,128,0.8);*/
 }
-.easyUtil-fontOverFlow:hover *{
-    /*overflow: visible;*/
-    color: #4dbeff !important;
-}
 .easyUtil-loading{
 	text-align: center;
 	margin: 5px auto;
@@ -466,6 +481,7 @@ a{
     display: inline-block;
     white-space: pre;
     text-align: center;
+    cursor: pointer;
 }
 .easyUtil-btn:hover{
 	box-shadow: 0px 0px 10px;
@@ -568,25 +584,25 @@ border-radius:100px;*/
     _display: none;
 }
 .layui-layer {
-	border: 1px solid #3D7295 !important;
-	box-shadow: rgba(0, 125, 255, 0.5) 0px 0px 30px!important;
+	border: 1px solid #406f95 !important;
+	/*box-shadow: rgba(0, 125, 255, 0.5) 0px 0px 30px!important;*/
 	background-color: #002e4c !important;
 }.layui-layer-title{
     color:rgb(255, 255, 255) !important;
-    border-bottom:1px solid #3D7295 !important;
-    background-color:#004B7B !important;
+    border-bottom:1px solid #406f95 !important;
+    background-color:#00457b !important;
     padding: 0% !important;
 	text-align: center !important;
 	font-weight: 700 !important;
 	font-size: 16px !important;
 }.layui-layer-content{
     color:#fff !important;
-    background-color:#002e4c !important;
-    border-left:0px solid #3D7295 !important;
-    border-right:0px solid #3D7295 !important; 
-    border-bottom:0px solid #3D7295 !important;
+    background-color:#00284c !important;
+    border-left:0px solid #406f95 !important;
+    border-right:0px solid #406f95 !important; 
+    border-bottom:0px solid #406f95 !important;
 }.layui-layer-shade{
-    opacity:0.5 !important;
+    opacity:0.8 !important;
 }.layui-layer-btn{
     background-color:rgba(21,82,119,0.8);
     border-left:1px solid #2d7b80 !important;
@@ -776,21 +792,22 @@ border-radius:100px;*/
 .dropdown-toggle:focus {
   	outline: 0;
 }
-.easyUtil-blueForm{
-    border: 1px solid #2d6d92;
-    color: #4dbeff;
+.easyUtil-blueForm {
+    border: 1px solid rgba(0,129,195,1);
+    color: #fff;
     font-size: 12px;
-    padding:0px 5px;
-    top: 0px;;
+    padding: 0px 5px;
+    top: 0px;
     height: 29px;
-   	min-width: 110px;
+    min-width: 110px;
     line-height: 4ex;
     margin-left: 15px;
     box-sizing: border-box;
     display: inline-block;
+    border-radius: 5px;
 }
-.easyUtil-blueForm:hover{
-	box-shadow: 0px 0px 10px;
+.easyUtil-blueForm:hover {
+    box-shadow: 0px 0px 10px rgba(0,129,195,1);
 }
 .downarray{
 	border-left: 2px solid;
@@ -832,7 +849,7 @@ border-radius:100px;*/
     margin: 2px 0 0;
     font-size: 12px;
     text-align: left;
-    background-color: rgba(0,34,64,0.9);
+    background-color: rgba(0,47,102,0.9);
     -webkit-background-clip: padding-box;
     background-clip: padding-box;
     border: 1px solid #55a4ba;
