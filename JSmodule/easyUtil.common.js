@@ -2,8 +2,6 @@
 //  = common function copyright qy = 
 //  ========== 
 define(function(require, exports, module) {
-
-	//直接格式日期方法
 	Date.prototype.Format = function(fmt) {
 		var o = {
 			"M+": this.getMonth() + 1, //月份 
@@ -20,30 +18,27 @@ define(function(require, exports, module) {
 		return fmt;
 	}
 
-	//判断字符串结尾的方法
 	String.prototype.endWith = function(endStr) {
 		var d = this.length - endStr.length;
 		return(d >= 0 && this.lastIndexOf(endStr) == d)
 	}
-
-	//json日期格式化
+	
 	function formatDate(dateData, style) {
 		if(typeof dateData == "object" && typeof style == "string") {
 			var datetime = new Date();
 			datetime.setTime(dateData.time);
 			return datetime.Format(style);
 		} else {
-			throw new TypeError("formatDate方法，第一参数必须为json类型日期，第二参数必须为字符串")
+			throw new TypeError("参数有误")
 		}
 	}
-
-	//格式化三位分隔数字
+	//第一参数是掺入的数字，必须数字类型，第二参数为是否带空格，默认不写则带空格
 	function treeNumPart(data, flag) {
 		if(typeof data == "number") {
 			var num = data,
 				num = (num || 0).toString(),
 				result = '';
-			if(flag) { //不带空格
+			if(flag) { //
 				while(num.length > 3) {
 					result = ',' + num.slice(-3) + result;
 					num = num.slice(0, num.length - 3);
@@ -59,7 +54,7 @@ define(function(require, exports, module) {
 			}
 			return result;
 		} else {
-			throw new TypeError("treeNumPart方法，第一参数必须为数字类型")
+			throw new TypeError("第一参数必须为数字类型")
 		}
 	};
 
