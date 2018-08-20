@@ -232,10 +232,18 @@ Vue.component('super-bar',{
 	template:'\
 	<div class="easyUtil-outBar">\
 		<div class="easyUtil-bar" :style="styles"></div>\
-		<span>{{value}}</span>\
+		<span>{{val}}</span>\
 	</div>',
 	props:["bar","value"],
 	data:function(){
+		return {
+			val : this.value
+		}
+	},
+	watch:{
+		value : function(data){   //监听value变化,则val也变化
+			this.val = data;
+		}
 	},
 	computed:{
 		styles:function(){
