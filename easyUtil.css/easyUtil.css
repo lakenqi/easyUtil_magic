@@ -25,7 +25,9 @@ html,body{
 * {
     margin: 0px;
     padding: 0px;
-    /*font-family: tahoma !important;*/
+    border: 0px;
+    text-decoration: 0px;
+    font-family: tahoma !important;
 }
 table thead, tbody tr {
     display:table;
@@ -42,7 +44,11 @@ button{
     background:none;
     border: none;
     cursor: pointer;
-    white-space: pre;
+    white-space: pre-wrap;
+}
+iframe{
+	border: none;
+	width: 100%;
 }
 input{
 	background: none;
@@ -197,6 +203,7 @@ a{
 .easyUtil-outBar{  
 	width: 84%;
 	height: 10px;
+	text-align: left !important;
 }
 .easyUtil-bar{
 	transition: width .4s;
@@ -222,6 +229,13 @@ a{
 	border-radius: 5px;
 }
 /* =========================================================== */
+/* =========================== imgThing ================================= */
+.easyUtil-backImgPostion{
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-position: center;
+}
+/* ====================================== */
 /* ========================table serise=================================== */
 /* = table = */
 .easyUtil-table{
@@ -233,7 +247,7 @@ a{
 	/*border: 1px #3d7295 solid;*/
 }
 .easyUtil-table > thead > tr{
-	background-color:rgba(1,54,106,0);
+	background-color:rgba(0,116,164,0.8);
 }
 .easyUtil-table > thead > tr > th{
 	border-bottom: none !important;
@@ -263,7 +277,7 @@ a{
 	white-space: pre;
 }
 .easyUtil-table > .thead >.tr {
-	background-color:rgba(1,54,106,0);
+	background-color:rgba(0,116,164,0.8);
 }
 .easyUtil-table > .thead >.tr >.th{
 	border-bottom: none !important;
@@ -282,13 +296,13 @@ a{
 	background-color:rgba(1,54,106,0);
 }
 .easyUtil-table tbody tr:nth-child(odd){
-	background-color: rgba(0,132,192,0.2);
+	background-color: rgba(5, 49, 122,0.5);
 }
 .easyUtil-table .tbody .tr:nth-child(even){
 	background-color:rgba(1,54,106,0);
 }
 .easyUtil-table .tbody .tr:nth-child(odd){
-	background-color: rgba(0,132,192,0.2);
+	background-color: rgba(5, 49, 122,0.5);
 }
 /* = hoverColor = */
 .easyUtil-table tbody tr:hover{
@@ -379,28 +393,28 @@ a{
 }
 /*fontCSS*/
 .easyUtil-fOrange{
-    color: #ffa200 !important;  
+    color: #ffba00 !important;  
 }
 .easyUtil-fBlue{
-    color: #3ae1e9 !important;
+    color: #00d2ff !important;
 }
 .easyUtil-fDarkBlue{
-    color: #5dccff !important;
+    color: #3fa1ff !important;
 }
 .easyUtil-fLightBlue{
-	color: #86FAFF !important;
+	color: #3ecbcb !important;
 }
 .easyUtil-fGreen{
-    color: #08fd1c !important;
+    color: #50cb74 !important;
 }
 .easyUtil-fYellow{
-    color: #fffc00 !important;
+    color: #fbd444 !important;
 }
 .easyUtil-fPinkRed{
-    color: #ea00ff !important;
+    color: #9760e5 !important;
 }
 .easyUtil-fRed{
-    color: #d6505f !important;
+    color: #f2637b !important;
 }
 .easyUtil-fBlack{
     color: #1a1a1a !important;
@@ -810,18 +824,25 @@ border-radius:100px;*/
     box-shadow: 0px 0px 10px rgba(0,129,195,1);
 }
 .downarray{
-	border-left: 2px solid;
+	/*border-left: 2px solid;
 	border-bottom: 2px solid;
 	transform: rotate(-45deg);
 	height: 9px;
 	width: 9px;
 	cursor: pointer;
-	margin-top: 0.25em;
+	margin-top: 0.35em;
 	box-sizing: content-box;
-	margin-right: 0.2em;
+	margin-right: 0.2em;*/
+	height: 0px;
+	width: 0px;
+	border: 10px solid;
+	border-left-color: transparent;
+	border-right-color: transparent;
+	border-bottom-color: transparent;
+	margin-top: 0.6em;
 }
 .downarray:before{
-	content: " ";
+	/*content: " ";
 	white-space: pre;
 	display: inline-block;
 	border-left: 2px solid;
@@ -831,7 +852,7 @@ border-radius:100px;*/
 	margin-left: 2px;
 	margin-top: -4px;
 	line-height: 2em;
-	vertical-align: 15px;  /*ie middle,other ok*/
+	vertical-align: 15px; */ /*ie middle,other ok*/
 }
 .dropdown-toggle{
 	height: 100%;
