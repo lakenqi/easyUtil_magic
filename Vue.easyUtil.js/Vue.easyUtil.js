@@ -232,18 +232,14 @@ Vue.component('super-bar',{
 	template:'\
 	<div class="easyUtil-outBar">\
 		<div class="easyUtil-bar" :style="styles"></div>\
-		<span>{{val}}</span>\
+		<span>{{value}}</span>\
 	</div>',
 	props:["bar","value"],
 	data:function(){
-		return {
-			barWidth:this.bar,
-			val :this.value
-		}
 	},
 	computed:{
 		styles:function(){
-			return {"width": this.barWidth+"%"};
+			return {"width": this.bar+"%"};
 		},
 	}
 });
