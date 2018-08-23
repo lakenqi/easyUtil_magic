@@ -17,7 +17,7 @@ Vue.prototype._s = function(s) {
 //====================================默认值结束====================================
 //====================================组件部分====================================
 //  = 下拉框 = 
-Vue.component('e-selected', {
+Vue.component('super-selected', {
 	props: ['id', 'display', 'values'],
 	template: '\
 		<div :id="id" class="easyUtil-dropdown easyUtil-blueForm" v-outsideclose="closeMenu" @click="openMenu()" :class="openClass">\
