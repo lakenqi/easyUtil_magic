@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+		<link rel="stylesheet" href="css/easyUtil.import.css" />
+		<style>
+			[v-cloak]:{
+				display: none;
+			}
+		</style>
+		<title></title>
+	</head>
+	<body style="background-color: #000000;">
+		<div id="test" class="easyUtil-flexContainerRow"  v-cloak>
+			<div id="page">
+				<super-page pageid="pageNum" v-model="value" :max="lastPage"
+					@down="getPageNum"
+					@up="getPageNum"
+					@go="getPageNum"
+					></super-page>
+			</div>
+		</div>
+		<script type="text/javascript" src="js/vue.min.js"></script>
+		<script type="text/javascript" src="../Vue.easyUtil.js"></script>
+		<script>
+			var page = new Vue({
+				el:"#page",
+				data:{
+					lastPage:10,
+					value:1
+				},
+				methods:{
+					getPageNum:function(value){
+						console.log(value)
+					}
+				}
+			})
+		</script>
+	</body>
+</html>
