@@ -1,0 +1,104 @@
+/* ========== */
+/* = component css by qy = */
+/* = unify and easy-using for css  = */
+/* = continue updating  = */
+/* = CopyRight by qy  = */
+/* ========== */
+/* ======================== hover menu display class ============================== */
+.easyUtil-mainMenu{
+	border-bottom: 5px solid transparent;
+}
+.easyUtil-unvisiable{
+	position: absolute;
+	visibility: hidden;
+}
+.easyUtil-mainMenu:hover .easyUtil-unvisiable{
+	visibility: visible;
+	transition: visibility 0s .4s;
+}
+/* ============================================================================== */
+/* ============================== pageModel Css ========================================= */
+.easyUtil-page{
+	min-width: 25%;
+	height: 2em;
+}
+.easyUtil-page *{
+	color: #54C9FF;
+	font-size: 1.03vw;
+	white-space: pre;
+}
+.easyUtil-page .btn{
+	font-size: 0.8vw;
+	cursor: pointer;
+	vertical-align: 1px;
+}
+.easyUtil-page input{
+	width: 45px;
+	border: 1px solid #54C9FF;
+	padding-left: 0.3em;
+	color: #fff;
+	line-height: 2.5ex;
+	vertical-align: -1px;
+}
+/* ========================================================================================= */
+/* ============================ progressBar css =================================== */
+.easyUtil-progressBar{   /*mainDiv*/
+	display: -webkit-flex;
+    display: flex;
+    justify-content: space-between;
+	flex-wrap: wrap;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	margin: 1em auto;
+}
+.easyUtil-numDiv{   /*num for bar*/
+	font-size: 0.8vw;
+	line-height: 4ex;
+	text-align: right;
+	width: 77%;
+}
+.easyUtil-numDiv>div{  /*num animate for bar*/
+	transition: width .4s;
+}
+.easyUtil-outProBar{ 
+	width: 100%;
+	height: 10px;
+	background-color: rgba(2, 88, 133, 0.3)
+}
+.easyUtil-inProBar{  
+	border-radius: 0 5px 5px 0px;
+	background-color: currentcolor/* #54C9FF*/;
+	height: 100%;
+	transition: width .4s;
+}
+/* ================================================================================ */
+/* ================================= ranking bar  ============================= */
+.easyUtil-outBar{  
+	width: 84%;
+	height: 10px;
+	text-align: left !important;
+}
+.easyUtil-bar{
+	transition: width .4s;
+	display: inline-block;
+	height: 100%;
+	max-width: 100%;
+	border-radius: 0 5px 5px 0;
+	background:-moz-linear-gradient(left, #54C9FF, #78FF00);
+	background: -webkit-linear-gradient(left, #54C9FF, #78FF00);
+	background: linear-gradient(left, #54C9FF, #78FF00);
+	background-color: #54C9FF;   /*for IE*/
+}
+/* ======================================================================== */
+/* ==================================== tips ======================= */
+.easyUtil-layer{
+	z-index: 5;
+	text-align: center;
+	max-width: 24%;
+	height: 10%;
+	vertical-align: baseline;
+	line-height: 8ex;
+	background-color: rgba(0,0,0,0.7);
+	border-radius: 5px;
+}
+/* =========================================================== */

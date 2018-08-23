@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/easyUtil.import.css" />
+	</head>
+
+	<body style="background-color: #000;">
+		<div id="selectDiv">
+			<e-selected id="houseRangeS" :display="display" v-model="display" @val="getVal" :values="selectedValues"></e-selected>
+		</div>
+		<script type="text/javascript" src="js/vue.js"></script>
+		<script type="text/javascript" src="js/Vue.easyUtil.js"></script>
+		<script>
+			var demo = new Vue({
+				el: '#selectDiv',
+				data: {
+					selected : null,
+					display: '测试',
+					selectedValues: [{
+							val: 1,
+							text: 'demo1'
+						},
+						{
+							val: 2,
+							text: 'demo2'
+						}
+					]
+				},
+				methods:{
+					getVal:function(value){
+						console.log(value);
+					}
+				}
+			});
+		</script>
+	</body>
+</html>
