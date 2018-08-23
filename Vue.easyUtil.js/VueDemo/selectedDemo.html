@@ -9,15 +9,14 @@
 
 	<body style="background-color: #000;">
 		<div id="selectDiv">
-			<e-selected id="houseRangeS" :display="display" v-model="display" @val="getVal" :values="selectedValues"></e-selected>
+			<super-selected id="houseRangeS" :display="display" v-model="display" @val="getVal" :values="selectedValues"></super-selected>
 		</div>
-		<script type="text/javascript" src="js/vue.js"></script>
-		<script type="text/javascript" src="js/Vue.easyUtil.js"></script>
+		<script type="text/javascript" src="js/vue.min.js"></script>
+		<script type="text/javascript" src="../Vue.easyUtil.js"></script>
 		<script>
 			var demo = new Vue({
 				el: '#selectDiv',
 				data: {
-					selected : null,
 					display: '测试',
 					selectedValues: [{
 							val: 1,
