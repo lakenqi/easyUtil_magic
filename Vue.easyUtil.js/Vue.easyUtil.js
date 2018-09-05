@@ -140,7 +140,7 @@ Vue.component('super-table', {
 //  = 分页组件 = 
 Vue.component("super-page", {
 	template: '\
-	<div class="easyUtil-page">\
+	<div class="easyUtil-page" onselectstart="return false" >\
 	  <span v-if="show==0">共 {{max}} 页</span>\
 		<span v-if="show==1">共 {{nums}} 条数据</span>\
 		<span class="btn" @click="pageDown" :disabled="currentVal <= min"> << </span>\
@@ -245,18 +245,22 @@ Vue.component('super-bar', {
 	props: ["bar", "value"],
 	data: function() {
 		return {
-			val: this.value
+			val: this.value,
+			barWidth :this.bar
 		}
 	},
 	watch: {
 		value: function(data) { //监听value变化,则val也变化
 			this.val = data;
+		},
+		bar: function(data) { //监听value变化,则val也变化
+			this.barWidth = data;
 		}
 	},
 	computed: {
 		styles: function() {
 			return {
-				"width": this.bar + "%"
+				"width": this.barWidth + "%"
 			};
 		},
 	}

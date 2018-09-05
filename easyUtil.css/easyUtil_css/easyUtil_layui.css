@@ -1,0 +1,57 @@
+/* ========================== layer=========================== */
+.layui-layer-setwin .layui-layer-close2 {
+    position: absolute;
+    right: -5px !important;
+    top: -9px !important;
+    width: 30px;
+    height: 30px;
+    margin-left: 0;
+    background-position: -149px -31px;
+    *right: -18px;
+    _display: none;
+}
+.layui-layer {
+	border: 1px solid #406f95 !important;
+	/*box-shadow: rgba(0, 125, 255, 0.5) 0px 0px 30px!important;*/
+	background-color: #002e4c !important;
+}.layui-layer-title{
+    color:rgb(255, 255, 255) !important;
+    border-bottom:1px solid #406f95 !important;
+    background-color:#00457b !important;
+    padding: 0% !important;
+	text-align: center !important;
+	font-weight: 700 !important;
+	font-size: 16px !important;
+}.layui-layer-content{
+    color:#fff !important;
+    background-color:#00284c !important;
+    border-left:0px solid #406f95 !important;
+    border-right:0px solid #406f95 !important; 
+    border-bottom:0px solid #406f95 !important;
+}.layui-layer-shade{
+    opacity:0.8 !important;
+}.layui-layer-btn{
+    background-color:rgba(21,82,119,0.8);
+    border-left:1px solid #2d7b80 !important;
+    border-right:1px solid #2d7b80 !important; 
+    border-bottom:1px solid #2d7b80 !important;
+}
+.layui-layer-btn .layui-layer-btn0 {
+    border-color: #4898d5 !important;
+    background-color: #2e8ded !important;
+    color: #fff;
+ }
+.layui-layer-btn a {
+    height: 28px;
+    line-height: 28px;
+    margin: 6px 6px 0;
+    padding: 0 15px;
+    border: none !important;
+    background-color: orange !important;
+    color: #333;
+    border-radius: 2px;
+    font-weight: 400;
+    cursor: pointer;
+    text-decoration: none;
+}
+/* ======================================================================== */

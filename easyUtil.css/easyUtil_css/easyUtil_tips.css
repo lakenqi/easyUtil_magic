@@ -1,0 +1,154 @@
+/* ========== */
+/* = tips css by qy = */
+/* = unify and easy-using for css  = */
+/* = continue updating  = */
+/* = CopyRight by qy  = */
+/* ========== */
+/* ====================== popover Tips =================================== */
+#easyUtil-tips{
+  display: none;
+  position: absolute;
+  /*max-width: 110px;*/
+  /*padding: 1px;*/
+  /*font-size: 12px;*/
+  font-style: normal;
+  color: yellow !important;
+  font-weight: border;
+  line-height: 1.42857143;
+  text-align: left;
+  text-align: start;
+  text-decoration: none;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: normal;
+  word-break: normal;
+  word-spacing: normal;
+  word-wrap: normal;
+  white-space: pre;
+ /* background-image: url(../img/bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 1000% 1000%;*/
+ background-color: rgba(0, 0, 0, 0.9);
+ /* -webkit-background-clip: padding-box;
+          background-clip: padding-box;*/
+  border: 1px solid #55a4ba; 
+  border-radius: 0px;
+  box-shadow: 0px 0px 10px rgba(45,123,128,0.8);
+  -webkit-box-shadow: 0 0px 0px rgba(0, 0, 0, .2);
+          box-shadow: 0 0px 0px rgba(0, 0, 0, .2);
+  text-indent:0px !important;
+  /*  line-break: auto;*/
+}
+#easyUtil-tips.top {
+  margin-top: -10px;
+}
+#easyUtil-tips.right {
+  margin-left: 10px;
+}
+#easyUtil-tips.bottom {
+  margin-top: 10px;
+}
+#easyUtil-tips.left {
+  margin-left: -10px;
+}
+.tips-title {
+    text-align: -moz-left;
+    padding: 4px 4px !important;
+    margin: 2px 0px 0px 0px;
+    font-size: 11px;
+    font-weight: bolder;
+    background-color: rgba(0,0,0,0) !important;
+    border-bottom: 0px solid #45A6B5;
+    border-radius: 0px;
+}
+.tips-content {
+  padding:2px 5px !important;
+  font-size: 11px;
+  text-align: left;
+  /*text-indent: 5px;*/
+  color:white;
+  /*width: 90px;*/
+  word-wrap: break-word !important;  
+  word-break: break-all !important; 
+}
+.arrow{
+    display: none !important;;
+}
+#easyUtil-tips > .arrow,
+#easyUtil-tips > .arrow:after {
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+}
+#easyUtil-tips > .arrow {
+  border-width: 11px;
+}
+#easyUtil-tips > .arrow:after {
+  content: "";
+  border-width: 10px;
+}
+#easyUtil-tips.top > .arrow {
+  bottom: -11px;
+  left: 50%;
+  margin-left: -11px;
+  /* border-top-color: #05E4ED; */
+  border-top-color: #55a4ba;
+  border-bottom-width: 0;
+}
+#easyUtil-tips.top > .arrow:after {
+  bottom: 1px;
+  margin-left: -10px;
+  content: " ";
+  border-top-color: #2C7A7F;
+  border-bottom-width: 0;
+}
+#easyUtil-tips.right > .arrow {
+  top: 50%;
+  left: -11px;
+  margin-top: -11px;
+  border-right-color: #55a4ba;
+  border-left-width: 0;
+}
+#easyUtil-tips.right > .arrow:after {
+  bottom: -10px;
+  left: 1px;
+  content: " ";
+  border-right-color: #333439;
+  border-left-width: 0;
+}
+#easyUtil-tips.bottom > .arrow {
+  top: -11px;
+  left: 50%;
+  margin-left: -11px;
+  border-top-width: 0;
+  border-bottom-color: #999;
+  border-bottom-color: #55a4ba;
+}
+#easyUtil-tips.bottom > .arrow:after {
+  top: 1px;
+  margin-left: -10px;
+  content: " ";
+  border-top-width: 0;
+  border-bottom-color: #333439;
+}
+#easyUtil-tips.left > .arrow {
+  top: 50%;
+  right: -11px;
+  margin-top: -11px;
+  border-right-width: 0;
+  border-left-color: #999;
+  border-left-color: #55a4ba;
+}
+#easyUtil-tips.left > .arrow:after {
+  right: 1px;
+  bottom: -10px;
+  content: " ";
+  border-right-width: 0;
+  border-left-color: #333439;
+}
+
+/* ========================================================================= */

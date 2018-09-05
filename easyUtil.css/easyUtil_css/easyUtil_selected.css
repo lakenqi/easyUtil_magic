@@ -1,0 +1,155 @@
+/* ========== */
+/* = selected css by qy = */
+/* = unify and easy-using for css  = */
+/* = continue updating  = */
+/* = CopyRight by qy  = */
+/* ========== */
+/* ================================= select Form ================================ */
+.easyUtil-dropdown {
+  z-index: 2;
+  position: relative;
+}
+.easyUtil-dropdown span{
+	color: #FFFFFF;
+	line-height: 3.5ex;
+}
+.easyUtil-dropdown li{
+	display: block !important;
+}
+.easyUtil-dropdown-toggle:focus {
+  	outline: 0;
+}
+.easyUtil-downarray{
+	/*border-left: 2px solid;
+	border-bottom: 2px solid;
+	transform: rotate(-45deg);
+	height: 9px;
+	width: 9px;
+	cursor: pointer;
+	margin-top: 0.35em;
+	box-sizing: content-box;
+	margin-right: 0.2em;*/
+	height: 0px;
+	width: 0px;
+	border: 10px solid;
+	border-left-color: transparent;
+	border-right-color: transparent;
+	border-bottom-color: transparent;
+	margin-top: 0.6em;
+}
+.easyUtil-downarray:before{
+	/*content: " ";
+	white-space: pre;
+	display: inline-block;
+	border-left: 2px solid;
+	border-bottom: 2px solid;
+	width: 9px;
+	height: 9px;
+	margin-left: 2px;
+	margin-top: -4px;
+	line-height: 2em;
+	vertical-align: 15px; */ /*ie middle,other ok*/
+}
+.easyUtil-dropdown-toggle{
+	height: 100%;
+	width: 100%;
+}
+.easyUtil-dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: -1px;
+    z-index: 2;
+    width: 100%;
+    display: none;
+    float: left;
+    padding: 5px 0;
+    margin: 2px 0 0;
+    font-size: 12px;
+    text-align: left;
+    background-color: rgba(0,47,102,0.9);
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid #55a4ba;
+    border-radius: 0px;
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+    overflow: auto;
+    max-height: 110px;
+}
+.easyUtil-dropdown-menu.pull-right {
+  right: 0;
+  left: auto;
+}
+.easyUtil-dropdown-menu .divider {
+  height: 1px;
+  margin: 9px 0;
+  overflow: hidden;
+  background-color: #e5e5e5;
+}
+.easyUtil-dropdown-menu > li > a {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: normal;
+    line-height: 1.42857143;
+    color: #FFFFFF;
+    white-space: nowrap;
+}
+.easyUtil-dropdown-menu > li > a:hover,
+.easyUtil-dropdown-menu > li > a:focus {
+  color: #262626;
+  text-decoration: none;
+  background-color: rgba(0,82,153,0.9);
+}
+.easyUtil-dropdown-menu > .active > a,
+.easyUtil-dropdown-menu > .active > a:hover,
+.easyUtil-dropdown-menu > .active > a:focus {
+  color: #fff;
+  text-decoration: none;
+  background-color: #337ab7;
+  outline: 0;
+}
+.easyUtil-dropdown-menu > .disabled > a,
+.easyUtil-dropdown-menu > .disabled > a:hover,
+.easyUtil-dropdown-menu > .disabled > a:focus {
+  color: #777;
+}
+.easyUtil-dropdown-menu > .disabled > a:hover,
+.easyUtil-dropdown-menu > .disabled > a:focus {
+  text-decoration: none;
+  cursor: not-allowed;
+  background-color: transparent;
+  background-image: none;
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}
+.open > .easyUtil-dropdown-menu {
+  display: block;
+}
+.open > a {
+  outline: 0;
+}
+.easyUtil-dropdown-menu-right {
+  right: 0;
+  left: auto;
+}
+.easyUtil-dropdown-menu-left {
+  right: auto;
+  left: 0;
+}
+.easyUtil-dropdown-header {
+  display: block;
+  padding: 3px 20px;
+  font-size: 12px;
+  line-height: 1.42857143;
+  color: #777;
+  white-space: nowrap;
+}
+.easyUtil-dropdown-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+}
+/* =================================================================== */
