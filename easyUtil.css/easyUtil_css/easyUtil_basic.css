@@ -32,7 +32,7 @@ html,body{
 }
 table thead, tbody tr {
     display:table;
-   /* width:100%;*/
+    width:100%;
     table-layout:fixed;
 }
 img{
@@ -141,7 +141,6 @@ a{
 	text-align: center;
 	border-spacing: 0;
 	border-collapse: collapse;
-	width: 100%;
 	/*border: 1px #3d7295 solid;*/
 }
 .easyUtil-table > thead > tr{
@@ -160,6 +159,7 @@ a{
 }
 .thead,.tbody{
 	display: table !important;
+	width: 100%;
 	table-layout: fixed !important;
 }
 .tr{
