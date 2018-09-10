@@ -19,8 +19,8 @@ a:hover,a:focus,a:active,a:visited,a:link{
 	display: none;
 }
 html,body{
-	font-size: 1vw;
-	color: #FFFFFF;
+	font-size: 1em;
+	color: #000000;
 	cursor: default;
 }
 * {
@@ -32,7 +32,7 @@ html,body{
 }
 table thead, tbody tr {
     display:table;
-    width:100%;
+   /* width:100%;*/
     table-layout:fixed;
 }
 img{
@@ -42,31 +42,28 @@ ul li{
     list-style: none; 
 }
 button{
-    background:none;
     border: none;
     cursor: pointer;
     white-space: pre-wrap;
+    min-height: 30px;
 }
 iframe{
 	border: none;
 	width: 100%;
 }
 input{
-	background: none;
 	border: none;
-	height: 100%;
-	width: 85%;
+	width: 25vw;
+	min-height: 30px;
 }
 input[type=color]{
-    width: 25px;
-    height: 15px;
     border: 0;
     padding: 0;
     background-color: rgba(255,255,255,0);
     float: right;
 }
 h3{
-	font-size: 1.2vw;
+	font-size: 1.125em;
 	margin: 0.1em 0px 0.4em 0.4em;
 }
 input,img,textarea{
@@ -75,26 +72,23 @@ input,img,textarea{
 /*input range*/  
 input[type=range] {  
   -webkit-appearance: none;/
-  width: 100%;  
   background: -webkit-linear-gradient(#61bd12, #61bd12) no-repeat, #ddd;
   background-size: 100% 100%;
   height: 3px; 
 }  
 input[type=range]::-webkit-slider-thumb {  
   -webkit-appearance: none;  
-  height: 26px;
-  width: 26px; 
   background: #05E4ED;
   border-radius: 50%;  
   border: solid 1px #05E4ED; 
 } 
 a{
     cursor: pointer !important;
-    color:#ffffff !important;
+    color: inherit;
     display: inline-block;
 }
 /*for webkit Chrome scroll style*/
-::-webkit-scrollbar{
+/*::-webkit-scrollbar{
 	width: 2px;
 	height: 2px;
 }
@@ -105,7 +99,7 @@ a{
 ::-webkit-scrollbar-track{
 	background-color: #003d67;
 	border-radius: 2px;
-}
+}*/
 /* =================================================== */
 /* ======================= fixed body and perfect fits ====================== */
 .easyUtil-fixedBody{
@@ -147,6 +141,7 @@ a{
 	text-align: center;
 	border-spacing: 0;
 	border-collapse: collapse;
+	width: 100%;
 	/*border: 1px #3d7295 solid;*/
 }
 .easyUtil-table > thead > tr{
@@ -155,21 +150,16 @@ a{
 .easyUtil-table > thead > tr > th{
 	border-bottom: none !important;
 	padding: 1.33vh 4px !important;
-	font-size: 1vw;
-}
-.easyUtil-table > thead > tr > td{
-	border-bottom: none !important;
-	padding: 1.33vh 4px !important;
-	font-size: 1vw;
+	font-size: 1em;
 }
 .easyUtil-table > tbody > tr > td{
- 	border-top: none !important;
- 	padding: 1.33vh 4px !important;
- 	font-size: 0.9vw;
+	border-top: none !important;
+ 	padding: 0.75vh 4px !important;
+ 	font-size: 0.875em;
+ 	box-sizing: border-box;
 }
 .thead,.tbody{
 	display: table !important;
-	width: 100%;
 	table-layout: fixed !important;
 }
 .tr{
@@ -184,36 +174,36 @@ a{
 .easyUtil-table > .thead >.tr >.th{
 	border-bottom: none !important;
 	padding: 1.33vh 4px !important;
-	font-size: 1vw;
+	font-size: 1em;
 	box-sizing: border-box;
 	white-space: pre-line;
 }
 .easyUtil-table > .tbody >.tr>.td{
  	border-top: none !important;
- 	padding: 1.33vh 4px !important;
- 	font-size: 0.9vw;
+ 	padding: 0.5vh 4px !important;
+ 	font-size: 0.875em;
  	box-sizing: border-box;
- 	white-space: pre-wrap;
+ 	white-space: pre;
 }
 /* = changeColor = */
 .easyUtil-table tbody tr:nth-child(even){
-	background-color:rgba(1,54,106,0);
+	background-color:transparent;
 }
 .easyUtil-table tbody tr:nth-child(odd){
-	background-color: rgba(5, 49, 122,0.5);
+	background-color: transparent;
 }
 .easyUtil-table .tbody .tr:nth-child(even){
-	background-color:rgba(1,54,106,0);
+	background-color:transparent;
 }
 .easyUtil-table .tbody .tr:nth-child(odd){
-	background-color: rgba(5, 49, 122,0.5);
+	background-color: transparent;
 }
 /* = hoverColor = */
 .easyUtil-table tbody tr:hover{
-	background-color: #0084c0 !important;
+	background-color: transparent !important;
 }
 .easyUtil-table .tbody .tr:hover{
-	background-color: #0084c0 !important;
+	background-color: transparent !important;
 }
 /* ====================================================================== */
 /* ==================================  counter ================================ */
@@ -235,7 +225,7 @@ a{
 	min-height: 1.5em;
     padding: 0 3px;
 	text-align: center;
-	font-size: 0.8em;
+	font-size: 0.875em;
 	vertical-align: 0.2ex;
 	box-sizing: border-box;
 }.counter1:before{
@@ -251,7 +241,7 @@ a{
 }
 .easyUtil-CounterHead:before{
 	content: "序号";
-	font-size: 1vw;
+	font-size: 1em;
 	font-weight: bolder;
 /*	display: inline-block;
 	margin: 7%;*/
@@ -357,7 +347,7 @@ a{
 	/*cursor: pointer;*/
 }
 .easyUtil-fontOverFlow:hover{
-	color: #4dbeff !important;
+	/*color: #4dbeff !important;*/
 /*	overflow: visible;
 	content: attr(content);
 	white-space: normal;
@@ -370,45 +360,50 @@ a{
 }
 .easyUtil-loading{
 	text-align: center;
-	margin: 5px auto;
+	margin: 30vh auto;
 }
 .easyUtil-loading >img{
-	width: 25px;
-	height: 25px;
+	width: 5vh;
 }
 
 /*instead of nothing*/
 .easyUtil-noContent{
 	text-align: center;
-    font-size: 15px;
+    font-size: 0.875em;
     margin: 1em auto;
     font-weight: 700;
 }
 /*button*/
 .easyUtil-btn{
-	color: #4dbeff;
 	border: 1px solid;
-    font-size: 15px;
-    padding: 0px 5px;
     top: 0px;
-    min-height 30px;
     min-width: 110px;
-    line-height: 2ex;
-    margin-left: 15px;
+    margin-left: 1vw;
     box-sizing: border-box;
     display: inline-block;
-    white-space: pre;
+    white-space: pre-wrap;
     text-align: center;
     cursor: pointer;
 }
 .easyUtil-btn:hover{
-	box-shadow: 0px 0px 10px;
+	box-shadow: 0px 0px 2px;
 }
-
+.easyUtil-input {
+    border: 1px solid;
+    padding: 0px 5px;
+    top: 0px;
+    min-width: 110px;
+    margin-left: 15px;
+    box-sizing: border-box;
+    display: inline-block;
+}
+.easyUtil-input:hover {
+    box-shadow: 0px 0px 2px;
+}
 .easyUtil-blueForm {
-    border: 1px solid rgba(0,129,195,1);
+    border: 1px solid;
     color: #fff;
-    font-size: 12px;
+    font-size: 0.75em;
     padding: 0px 5px;
     top: 0px;
     height: 29px;
@@ -428,4 +423,30 @@ a{
     border: 1px solid #2d6d92 !important;
     background: rgba(7, 43, 96, 0.5);
 }
+/* ========== */
+
+/* = loading animation = */
+.easyUtil-animation-move {
+	position: relative;
+	animation: move 1s infinite ease-out;
+	-webkit-animation:move 1s infinite ease-out;
+}
+
+.easyUtil-animation-line {
+	border-bottom: 5px dotted;
+	/*position: absolute;*/
+	display: inline-block;
+	animation: line 1s infinite ease-out;
+	-webkit-animation:line 1s infinite ease-out;
+}
+
+@keyframes move {0% {left: 0px;}100% {left: 50px;}}
+@-moz-keyframes move{0% {left: 0px;}100% {left: 50px;}}
+@-ms-keyframes  move {0% {left: 0px;}100% {left: 50px;}}
+@-webkit-keyframes  move {0% {left: 0px;}100% {left: 50px;}}
+
+@keyframes line {0% {width: 0px;}100% {width: 50px;}}
+@-moz-keyframes line{0% {width: 0px;}100% {width: 50px;}}
+@-ms-keyframes  line {0% {width: 0px;}100% {width: 50px;}}
+@-webkit-keyframes  line {0% {width: 0px;}100% {width: 50px;}}
 /* ========== */
