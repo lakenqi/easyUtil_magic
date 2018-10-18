@@ -133,7 +133,7 @@
 						&emsp;&emsp;&emsp;<strong>imgUrl :</strong> '调取图片的action，填入相对路径即可，如“/类映射名/方法映射名”，不用加aciton字样，必填',</br>
 						&emsp;&emsp;&emsp;<strong>changeId :</strong> 是否有点击换图的标签Id名称，有则填入，无则默认点击图片更换验证码，选填</br>
 						&emsp;&emsp;&emsp;<strong>checkEvent :</strong> 激活验证的事件类型，默认blur,选填,</br>
-						&emsp;&emsp;&emsp;<strong>checkFn : </strong>'自定义的验证函数，必填,</br>
+						&emsp;&emsp;&emsp;<strong>checkFn : </strong>'自定义的验证函数，选填,如有外部的综合验证，该项可不填</br>
 						&emsp;&emsp;&emsp;<strong>isLog : </strong>'false,是否显示内部日志,默认false, 选填',</br>
 				&emsp;};</br>   
 * <strong>19.$.createEchartsMagic(options),$.resizeEchartsMagic()----echarts生成和自适应屏幕方法，生成方式可返回echats的数组，可用于清除重新生成，顺序与以下参数一致，参数如下</strong></br>
