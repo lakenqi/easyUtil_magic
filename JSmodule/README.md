@@ -71,7 +71,7 @@
 				<p></p>&emsp;&emsp;获取或赋值给对应的style属性，key值可直接输入对应的css属性（无需驼峰转换），value值有则赋值，无则取值</span>
 			</li>
 			<li>
-				<p>7.attr(el,key,value):</p>
+				<p>9.attr(el,key,value):</p>
 				<p></p>&emsp;&emsp;DOM属性的取值或赋值方式，key为对应的DOM属性，无需关注是否DOM对象的属性，还是自定义属性，该方法均可操作，value值有则赋值，无则取值</span>
 			</li>
 		</ul>
