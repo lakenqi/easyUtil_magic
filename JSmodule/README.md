@@ -35,6 +35,21 @@
 				<p>8.switchAndAntiSql(data):</p>
 				<p>&emsp;&emsp;防止sql注入，自动过滤sql关键字，如发现则返回false,否则返回URI编码后的字符</p>
 			</li>
+			<li>
+				<p>9.testPalindrome(data):</p>
+				<p>&emsp;&emsp;回文数判定方法，返回布尔值</p>
+			</li>
+			<li>
+				<p>10.createProgress(done, total, {<br/>
+						&emsp;el = document.body,<br/>
+						&emsp;width = 200,<br/>
+						&emsp;height = 10,<br/>
+						&emsp;color = "green",<br/>
+						&emsp;colorBg = "#000",<br/>
+						&emsp;callback = function() {},<br/>
+					} = {}) :</p>
+				<p>&emsp;&emsp;canvas实现进度条功能，done为已完成数，total为总数，第三参数为可选，el为进度条插入元素位置，宽高，color进度条颜色，colorBg进度条背景颜色,callback为进度条结束时的回调函数</p>
+			</li>
 		</ul>
 		<h5>二、DOM工具（easyUtil.dom）普通引用通过对象名easyDom点出如下方法,该模块适用原生js操作</h5>
 		<ul>
