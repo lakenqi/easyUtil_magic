@@ -44,6 +44,7 @@
 							&emsp;&emsp;&emsp;&emsp;'value=""', 对应的值</br>
 							&emsp;&emsp;&emsp;&emsp;'color=""', 对应的颜色 </br>	
 							&emsp;&emsp;&emsp;&emsp;'percent=""', 对应的百分比 </br>
+							&emsp;&emsp;&emsp;&emsp;'is-percent=""', 是否显示百分比，默认true </br>
 * <strong>8.to-top  返回顶部按钮组件，点击可返回页面顶部；页面滚动自动显示，返回顶部自动隐藏:</br>
 &emsp;&emsp;&emsp;&emsp;</strong>父级组件上使用如下属性：</br>
 							&emsp;&emsp;&emsp;&emsp;'id=""', 按钮id  </br>
