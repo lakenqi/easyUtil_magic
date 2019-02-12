@@ -15,16 +15,17 @@
 &emsp;&emsp;&emsp;&emsp;</strong>如有点击外部任意地方关闭菜单的需求，可使用该组件，绑定对应的关闭函数名称即可</br>
 * <strong>4.super-table  表格组件:</br>
 &emsp;&emsp;&emsp;&emsp;</strong>父级组件上使用如下属性：也可参考demo文件使用</br>
-										&emsp;&emsp;&emsp;&emsp;'maindiv',  //主divid</br>
-										&emsp;&emsp;&emsp;&emsp;'bodydiv',  //表格bodydivid</br>
-										&emsp;&emsp;&emsp;&emsp;'head',   //表头id</br>
-										&emsp;&emsp;&emsp;&emsp;'body',   //表身id</br>
+										&emsp;&emsp;&emsp;&emsp;'mainid',  //主divid</br>
+										&emsp;&emsp;&emsp;&emsp;'bodyid',  //表格bodydivid</br>
+										&emsp;&emsp;&emsp;&emsp;'theadid',   //表头id</br>
+										&emsp;&emsp;&emsp;&emsp;'tbodyid',   //表身id</br>
 										&emsp;&emsp;&emsp;&emsp;'emptyflag',   //显示无值内容标识</br>
-										&emsp;&emsp;&emsp;&emsp;'maindivclass',  //主div class，选填</br>
-										&emsp;&emsp;&emsp;&emsp;'bodydivclass',  //表格body div class，选填</br>
+										&emsp;&emsp;&emsp;&emsp;'mainclass',  //主div class，选填</br>
+										&emsp;&emsp;&emsp;&emsp;'bodyclass',  //表格body div class，选填</br>
 										&emsp;&emsp;&emsp;&emsp;'loadingpath',   //加载图表地址，有默认值，选填</br>
 										&emsp;&emsp;&emsp;&emsp;'iscounter',    //是否启用计数器，分别命名组件的id和默认显示文本,可开启自定义表格及计数模式，选填</br>
 										&emsp;&emsp;&emsp;&emsp;'emptytip',   //无值提示内容，有默认值，选填</br>
+										&emsp;&emsp;&emsp;&emsp;'emptyflag',   //无值判断标识，必填</br>
 * <strong>5.super-page  分页组件:上下翻页，回车或鼠标离开跳转自定义页码:</br>
 &emsp;&emsp;&emsp;&emsp;</strong>父级组件上使用如下属性：也可参考demo文件使用</br>
 										&emsp;&emsp;&emsp;&emsp;'v-model="value"',  </br>

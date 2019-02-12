@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>表格demo</title>
+		<link rel="stylesheet" href="css/easyUtil.import.css" />
+	</head>
+
+	<body>
+		<div id="app">
+			<super-table mainid="main2" bodyid="body2" theadid="thead2" tbodyid="tbody2" mainclass="classm" bodyclass="classb" loadingpath="${ctx}/images/Loading6-3.gif" iscounter="true" :emptyflag='show'>
+				<template slot="thead" v-for="(data,i) in thdata">
+					<span class="th" :style="getWidth(i)">{{data}}</span>
+				</template>
+				<template slot="tbody">
+					<div class="tr" :class="rangClass(i)" v-for="(tableData,i) in tableDatas">
+						<span class="td" :style="getWidth(0)">
+							<input type="checkbox" v-model="selectedVals" :value="tableData.id" />
+						</span>
+						<span class="td easyUtil-fGreen" :style="getWidth(1)" :title="tableData.id">{{tableData.id}}</span>
+						<span class="td easyUtil-font13 easyUtil-fontOverFlow easyUtil-fBlue" :style="getWidth(2)">{{tableData.name}}</span>
+					</div>
+				</template>
+			</super-table>
+			<div style="color: #000000;">{{selectedVals}}</div>
+		</div>
+		
+		<script type="text/javascript" src="js/vue.min.js"></script>
+		<script type="text/javascript" src="js/Vue.easyUtil.min.js"></script>
+		<script>
+			let table = new Vue({
+				el: "#app",
+				data: {
+					thdata: ["选择","编号", "名称"],
+					widths: ["10%", "50%"],
+					tableDatas: [{
+							id: 1,
+							name: 'test'
+						},
+						{
+							id: 2,
+							name: 'test1'
+						},
+						{
+							id: 3,
+							name: 'test2'
+						},
+						{
+							id: 4,
+							name: 'test3'
+						},
+					],
+					selectedVals: [],
+					show: false
+				},
+				methods: {
+					getWidth(i) {
+						return {
+							"width" :　this.widths[i] || ""
+						};
+					},
+					rangClass(i) { //序号颜色
+						switch(~~i) {
+							case 0:
+								return 'easyUtil-counter counter1';
+							case 1:
+								return 'easyUtil-counter counter2';
+							case 2:
+								return 'easyUtil-counter counter3';
+							default:
+								return 'easyUtil-counter';
+						}
+					},
+				},
+
+			})
+		</script>
+	</body>
+
+</html>
