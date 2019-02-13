@@ -4,7 +4,7 @@
  * <h3>可利用该生成器生成如下组件，便于开发，样式需引入easyUtil_basic.css和easyUtil_component.css,如果使用下拉框则引入easyUtil_selected.css可在vueDemo文件夹下找到</h3>
  <h3>部分组件的功能性操作可能需要依赖其他文件，请参阅详细说明</h3>
  * <h3>所有依赖文件位于support文件加下，感谢提供依赖资源的大神，如需更多资源，请到相应的地址下载</h3>
- * <strong>1.super-selected  下拉框组件:</br>
+ * <strong>1.easy-selected  下拉框组件:</br>
  &emsp;&emsp;&emsp;&emsp;</strong>在父级组件上用id，display v-model="display" @val="自定义方法名" :values="自定义名称"属性：</br>
  						&emsp;&emsp;&emsp;&emsp;分别命名组件的id，默认显示文本，选中的值和下拉框内容,</br>
  						&emsp;&emsp;&emsp;&emsp;样式引入easyUtil.basic和selectd即可。初始化时，设置display默认显示的值，values下拉框值和@val获得选中值的方法即可</br>
