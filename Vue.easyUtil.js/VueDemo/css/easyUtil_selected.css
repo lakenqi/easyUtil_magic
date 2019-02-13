@@ -53,6 +53,7 @@
 .easyUtil-dropdown-toggle{
 	height: 100%;
 	width: 100%;
+	align-items: center;
 }
 .easyUtil-dropdown-menu {
     position: absolute;

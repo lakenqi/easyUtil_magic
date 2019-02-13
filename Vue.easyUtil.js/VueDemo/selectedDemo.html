@@ -3,37 +3,99 @@
 
 	<head>
 		<meta charset="UTF-8">
-		<title></title>
+		<title>动态添加下拉框demo</title>
 		<link rel="stylesheet" href="css/easyUtil.import.css" />
 	</head>
 
-	<body style="background-color: #000;">
-		<div id="selectDiv">
-			<super-selected id="houseRangeS" :display="display" @val="getVal" :values="selectedValues"></super-selected>
+	<body style="background-color: rgba(0,0,0,.5);">
+			
+		<!--描述：单个下拉框 -->
+		<div style="height: 100px;" id="sigle-selected">
+			单一下拉框：
+			<easy-select :id="id" :display="display" @val="getVal" :values="selectedValues"></easy-select>
 		</div>
+		
+		<!--描述：动态添加下拉框-->
+		<div id="muti-selected">
+			动态下拉框：
+			<template v-for="(key,i) in components">
+				<div v-if="key.show">
+					<easy-select :style="key.zIndex" :id="key.id" :display="display" @val="getVal" :values="selectedValues"></easy-select>
+					<button v-if="i > 0" @click="del(i)">delete</button>
+				</div>
+			</template>
+			<button @click="add()">add</button>
+		</div>
+		
 		<script type="text/javascript" src="js/vue.min.js"></script>
-		<script type="text/javascript" src="../Vue.easyUtil.min.js"></script>
+		<script type="text/javascript" src="js/Vue.easyUtil.min.js"></script>
 		<script>
-			var demo = new Vue({
-				el: '#selectDiv',
+			
+			var single = new Vue({
+				el: '#sigle-selected',
 				data: {
+					id:'test',
 					display: '测试',
 					selectedValues: [{
-							val: 1,
+							val: 99,
 							text: 'demo1'
 						},
 						{
-							val: 2,
-							text: 'demo2'
+							val: 100,
+							text: 'demo100'
 						}
 					]
 				},
-				methods:{
-					getVal:function(value){
-						console.log(value);
+				methods: {
+					getVal: function(data) {
+						console.log(data);
+					},
+				}
+			});
+			
+			var demo = new Vue({
+				el: '#muti-selected',
+				data: {
+					display: '测试',
+					components: [{id:'selected',zIndex:'z-index:2',show:true}],
+					index: 1,
+					selectedValues: [{
+							val: 99,
+							text: 'demo1'
+						},
+						{
+							val: 100,
+							text: 'demo100'
+						}
+					]
+				},
+				mounted(){
+					//每5s整理一次数据，清空不显示的值
+					setInterval(()=>{
+						this.components = this.components.filter((item,i)=>{
+							return item.show;
+						})
+					},5000)
+				},
+				methods: {
+					getVal: function(data) {
+						console.log(data);
+					},
+					//动态添加时需要
+					add() {
+						let len = this.components.length +　2;
+						this.components.forEach((item,i)=>{
+							item.zIndex = `z-index:${len-i}`;
+						})
+						this.components.push({id:`selected${this.index++}`, zIndex: 'z-index:2',show:true});
+					},
+					//删除逻辑
+					del(i) {
+						this.components[i].show = false;
 					}
 				}
 			});
 		</script>
 	</body>
+
 </html>

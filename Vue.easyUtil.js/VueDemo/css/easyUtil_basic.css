@@ -44,7 +44,6 @@ ul li{
 button{
     background:none;
     border: none;
-    cursor: pointer;
     white-space: pre-wrap;
 }
 iframe{
@@ -55,7 +54,7 @@ input{
 	background: none;
 	border: none;
 	height: 100%;
-	width: 85%;
+	/*width: 85%;*/
 }
 input[type=color]{
     width: 25px;
@@ -385,23 +384,77 @@ a{
 }
 /*button*/
 .easyUtil-btn{
-	color: #4dbeff;
-	border: 1px solid;
-    font-size: 15px;
-    padding: 0px 5px;
-    top: 0px;
-    min-height 30px;
-    min-width: 110px;
-    line-height: 2ex;
-    margin-left: 15px;
-    box-sizing: border-box;
-    display: inline-block;
-    white-space: pre;
-    text-align: center;
-    cursor: pointer;
+	color: #fff;
+	background-color: darkgrey;
+	border: 1px solid darkgrey;
+	font-size: 15px;
+	padding: 0px 5px;
+	top: 0px;
+	min-width: 5em;
+	line-height: 2ex;
+	margin-left: 15px;
+	box-sizing: border-box;
+	display: inline-block;
+	white-space: pre-wrap;
+	text-align: center;
+	height: 2em;
 }
-.easyUtil-btn:hover{
-	box-shadow: 0px 0px 10px;
+.easyUtil-btn i{
+	margin-right: .5em;
+}
+.easyUtil-btn-none{
+	cursor: pointer;
+	background-color: transparent;
+	border: 1px solid rgba(77, 180, 255);
+}
+.easyUtil-btn-none:hover{
+	box-shadow: 0 0 5px rgba(77, 180, 255);
+}
+.easyUtil-btn-blue{
+	cursor: pointer;
+	background-color: rgba(77, 180, 255);
+	border: 1px solid rgba(77, 180, 255);
+}
+.easyUtil-btn-blue:hover{
+	background-color: rgba(77, 200, 255);
+	border: 1px solid rgba(77, 200, 255);
+}
+.easyUtil-btn-green{
+	cursor: pointer;
+	background-color: rgba(64, 235, 5);
+	border: 1px solid rgba(64, 235, 5);
+}
+.easyUtil-btn-green:hover{
+	background-color: rgba(64, 255, 5);
+	border: 1px solid rgba(64, 255, 5);
+}
+.easyUtil-btn-orange{
+	cursor: pointer;
+	background-color: rgba(244, 109, 4);
+	border: 1px solid rgba(244, 109, 4);
+}
+.easyUtil-btn-orange:hover{
+	background-color: rgba(244, 129, 4);
+	border: 1px solid rgba(244, 129, 4);
+}
+.easyUtil-btn-red{
+	cursor: pointer;
+	background-color: rgba(214, 80, 95);
+	border: 1px solid rgba(214, 80, 95);
+}
+.easyUtil-btn-red:hover{
+	background-color: rgba(214, 100, 95);
+	border: 1px solid rgba(214, 100, 95);
+}
+.easyUtil-btn-yellow{
+	color: #000000;
+	cursor: pointer;
+	background-color: rgba(248, 229, 1);
+	border: 1px solid rgba(248, 229, 1);
+}
+.easyUtil-btn-yellow:hover{
+	background-color: rgba(248, 259, 1);
+	border: 1px solid rgba(248, 259, 1);
 }
 
 .easyUtil-blueForm {
@@ -420,6 +473,27 @@ a{
 }
 .easyUtil-blueForm:hover {
     box-shadow: 0px 0px 10px rgba(0,129,195,1);
+}
+.easyUtil-option-box{
+	border: 1px solid rgba(0,129,195,1);
+    color: #fff;
+    font-size: 12px;
+    padding: 0px 5px;
+    top: 0px;
+    height: 29px;
+    min-width: 110px;
+    line-height: 4ex;
+    margin-left: 15px;
+    box-sizing: border-box;
+    display: inline-block;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.easyUtil-option-box:hover {
+    box-shadow: 0px 0px 10px rgba(0,129,195,1);
+}
+.easyUtil-box-selected{
+	 box-shadow: 0px 0px 10px rgba(0,129,195,1);
 }
 /* ============================================================================== */
 /* = thinkSerach css = */

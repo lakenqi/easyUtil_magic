@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/easyUtil.import.css" />
+	</head>
+
+	<body style="background: #00284C;">
+		<div id="app">
+			<!--输入框 
+				v-model绑定的变量为输入框的值 ；
+				placeholder属性默认为请输入内容，可设置
+			-->
+			输入：<easy-input v-model="input"></easy-input>
+			<br>
+			<!--单选/复选框
+				1. type默认radio, 设置checkbox为复选框
+				2. show默认为true, 是否显示文字label
+				3. selected绑定选中的值的变量名称
+				4. @val绑定获得选中值的方法
+				5. id为标签的id
+				6. value为当前选项的值
+				7. label为显示的文字,不写则默认显示value值
+			-->
+			<!--单选-->
+			单选：
+			<template v-for="(val,i) in radioValues">
+				<easy-option
+					:selected="radio" 
+					@val="getRadio" 
+					:id="val.id" 
+					:value="val.value" 
+					:label="val.name"
+					>
+				</easy-option>
+			</template>
+				<br>
+			<!--复选框-->
+			复选：
+			<template v-for="(val,i) in checkValues">
+				<easy-option 
+					type="checkbox"
+					:selected="checkbox" 
+					@val="getCheckBox" 
+					:id="val.id" 
+					:value="val.value" 
+					>
+				</easy-option>
+			</template>
+				<br>
+			<!--按钮
+				1. id为标签id
+				2. color为按钮颜色默认透明none,可选blue,green,red,yellow,orange,none
+				3. disabled按钮是否可用，默认可用, 选填项
+				4. name按钮名称
+				5. icon按钮图表名称
+			-->
+			按钮：
+			<template v-for="(val,i) in btnValues">
+				<easy-btn 
+					:id="val.id"
+					:color="val.color"
+					:disabled="val.disabled"
+					:name="val.name"
+					:icon="val.icon"
+				></easy-btn>
+			</template>
+			<br>
+			<!--选项卡
+				1. id为标签id,默认optionCard-div
+				2. datas为选项卡数据，格式为{name:,value:,selected:false},name如省略则以value值显示
+				3. options为绑定的已选取值
+				4. @val绑定获得选中值的方法
+			-->
+			选项卡：
+			<easy-card 
+				:datas="optionsDatas"
+				:options="optionCard"
+				@val="getOptionCard"
+				></easy-card>
+			
+			<div>
+				input:{{input}}
+			</div>
+			<div>
+				radio:{{radio}}
+			</div>
+			<div>
+				checkbox:{{checkbox}}
+			</div>
+			<div>
+				optionCard:{{optionCard}}
+			</div>
+		</div>
+		<script type="text/javascript" src="js/vue.min.js"></script>
+		<script type="text/javascript" src="js/Vue.easyUtil.min.js" ></script>
+		<script>
+			let app = new Vue({
+				el: "#app",
+				data: {
+					input: '12',
+					radio: 'js',
+					checkbox:['js','html'],
+					optionCard:['1','2'],
+					radioValues: [{
+							id: 'js',
+							value: "1",
+							name:'js',
+						},
+						{
+							id: 'css',
+							value: "2",
+							name:'css',
+						},
+						{
+							id: 'html',
+							value: "3",
+							name:'html',
+						},
+					],
+					checkValues: [{
+							id: 'js1',
+							value: "js"
+						},
+						{
+							id: 'css1',
+							value: "css"
+						},
+						{
+							id: 'html1',
+							value: "html"
+						},
+						{
+							id: 'scss1',
+							value: "scss"
+						},
+					],
+					btnValues:[
+						{id:"btn1",name:"透明"},
+						{id:"btn2",color:"green", icon:"sjgl",name:"绿"},
+						{id:"btn3",color:"orange", icon:"qxgl",name:"橙"},
+						{id:"btn4",color:"red",name:"红"},
+						{id:"btn5",color:"yellow",name:"黄"},
+						{id:"btn6",color:"blue",name:"蓝"},
+						{id:"btn7",name:"不可用"},
+					],
+					optionsDatas:[
+						{value:"1",selected:false},
+						{name:"选项2",value:"2",selected:false},
+						{name:"选项3",value:"3",selected:false},
+						{name:"选项4",value:"4",selected:false},
+					]
+				},
+				methods: {
+					getRadio(val) {
+						this.radio = val;
+					},
+					getCheckBox(val) {
+						this.checkbox = val;
+					},
+					getOptionCard(val){
+						this.optionCard = val;
+					}
+				},
+				mounted(){
+					setTimeout(()=>{
+						this.radio = "1"
+						this.btnValues[6].disabled = true
+					},1000)
+				}
+			})
+		</script>
+	</body>
+
+</html>
